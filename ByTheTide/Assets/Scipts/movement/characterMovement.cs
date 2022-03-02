@@ -6,7 +6,6 @@ public class characterMovement : MonoBehaviour
     [Header("Speeds and forces")]
     [SerializeField] float gravity;
     [SerializeField] float movementSpeed;
-    [SerializeField] float turnSpeed;
     [SerializeField] Vector3 velocity;
     [SerializeField] float jumpHeight;
 
