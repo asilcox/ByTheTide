@@ -750,7 +750,7 @@ MonoBehaviour:
   musicAudioVolume: 0
   introMusic: {fileID: 8300000, guid: cf16b1bde5bc46a449040336e526b910, type: 3}
   LoopMusic: {fileID: 8300000, guid: edcb8488a2c19d84eb6b415bb37b5ed4, type: 3}
-  MusicTimeSwitch: 0
+  MusicTimeSwitch: 103
   PlayMusicOnAwake: 1
   isPlying: 0
 --- !u!1 &252337159
