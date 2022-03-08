@@ -34,8 +34,6 @@ public class characterRotation : MonoBehaviour
             }
 
         }
-
-
     }
 
     public void getInput()
