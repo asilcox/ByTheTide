@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class tdController : MonoBehaviour
@@ -12,41 +10,53 @@ public class tdController : MonoBehaviour
     [Header("Player interaction bool")]
     [SerializeField] bool canInteract;
     [Header("Raise and lower limits")]
-    [SerializeField] Transform maxRaise;
-    [SerializeField] Transform minRaise;
+    [SerializeField] Vector3 maxRaise;
+    [SerializeField] Vector3 minRaise;
     [Header("Current tide state")]
     [SerializeField] tideStates tStates;
+    [Header("Get day night sys")]
+    [SerializeField] DayNightController dnController;
+    private void Start()
+    {
+        dnController = GameObject.FindObjectOfType<DayNightController>();
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
-        switch(tStates)
+        switch (tStates)
         {
             //Tide is awaiting interaction
             case tideStates.idle:
                 {
-                    if(canInteract == true)
+
+                    if (canInteract == true)
                     {
                         tStates = tideStates.interact;
+
                     }
                     break;
                 }
-                //Tide is awaiting input
+            //Tide is awaiting input
             case tideStates.interact:
                 {
-                    if(Input.GetKey(KeyCode.T))
+                    dnController.daySpeedMultiplier = 0;
+
+                    if (Input.GetKey(KeyCode.T))
                     {
                         //Call raise tide function
+                        
                         raiseTide();
                     }
 
-                    if(Input.GetKey(KeyCode.G))
+                    if (Input.GetKey(KeyCode.G))
                     {
                         //Call lower tide function
+                        
                         lowerTide();
                     }
 
                     //Player exited collider
-                    if(canInteract == false)
+                    if (canInteract == false)
                     {
                         tStates = tideStates.idle;
                     }
@@ -57,19 +67,38 @@ public class tdController : MonoBehaviour
 
     public void raiseTide()
     {
-        //Raise tide in raise direction vector, time * rate
-        tideObject.transform.Translate(raiseDir * raiseRate * Time.deltaTime);
+        if (tideObject.transform.position.y >= maxRaise.y)
+        {
+            Debug.Log("Max height reached");
+        }
+        else
+        {
+            //Raise tide in raise direction vector, time * rated
+            dnController.daySpeedMultiplier = 0.35f;
+            tideObject.transform.Translate(raiseDir * raiseRate * Time.deltaTime);
+        }
+
     }
 
     public void lowerTide()
     {
-        //Lower tide in raise direction vector, time * rate
-        tideObject.transform.Translate(-raiseDir * raiseRate * Time.deltaTime);
+        if (tideObject.transform.position.y <= minRaise.y)
+        {
+            Debug.Log("Min height reached");
+        }
+        else
+        {
+            //Lower tide in raise direction vector, time * rate
+            dnController.daySpeedMultiplier = -0.35f;
+            tideObject.transform.Translate(-raiseDir * raiseRate * Time.deltaTime);
+        }
+
     }
 
+    
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             canInteract = true;
             other.gameObject.transform.parent = this.transform;
@@ -78,9 +107,10 @@ public class tdController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            canInteract=false;
+            dnController.daySpeedMultiplier = 0;
+            canInteract = false;
             other.gameObject.transform.parent = null;
         }
     }
