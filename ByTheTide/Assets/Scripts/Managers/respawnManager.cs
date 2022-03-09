@@ -6,8 +6,13 @@ public class respawnManager : MonoBehaviour
 {
     [SerializeField] GameObject playerPrefab;
 
-    public void resetPlayer(Transform lastObj)
+    public void resetPlayer(Transform lastObj, GameObject playerObject)
     {
-      var newObj = Instantiate(playerPrefab, lastObj.transform);
+        //Turns off character controller
+        playerObject.GetComponent<CharacterController>().enabled = false;
+        //Moves character position to previosly interacted with position
+        playerObject.transform.position = lastObj.transform.position + new Vector3(0,1,0);
+        //Turns on character controller
+        playerObject.GetComponent<CharacterController>().enabled = true;
     }
 }
