@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class tdController : MonoBehaviour
 {
+    private UIManager uManager;
     [Header("Tide object, should hold all platforms")]
     [SerializeField] GameObject tideObject;
     [Header("Raise direction + rate")]
@@ -16,8 +17,10 @@ public class tdController : MonoBehaviour
     [SerializeField] tideStates tStates;
     [Header("Get day night sys")]
     [SerializeField] DayNightController dnController;
+    
     private void Start()
     {
+        uManager = GameObject.FindObjectOfType<UIManager>();
         dnController = GameObject.FindObjectOfType<DayNightController>();
     }
     // Update is called once per frame
@@ -102,6 +105,7 @@ public class tdController : MonoBehaviour
         {
             canInteract = true;
             other.gameObject.transform.parent = this.transform;
+            uManager.triggerControls(true);
         }
     }
 
@@ -112,6 +116,7 @@ public class tdController : MonoBehaviour
             dnController.daySpeedMultiplier = 0;
             canInteract = false;
             other.gameObject.transform.parent = null;
+            uManager.triggerControls(false);
         }
     }
 
