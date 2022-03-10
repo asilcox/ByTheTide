@@ -3,6 +3,7 @@ using UnityEngine;
 public class characterMovement : MonoBehaviour
 {
     private CharacterController myController;
+    private respawnManager rSpawner;
     [Header("Speeds and forces")]
     [SerializeField] float gravity;
     [SerializeField] float movementSpeed;
@@ -16,25 +17,40 @@ public class characterMovement : MonoBehaviour
     [Header("Ground Checks")]
     [SerializeField] float groundDistance;
     [SerializeField] LayerMask groundMask;
+    [SerializeField] Transform lastPos;
     [SerializeField] bool isGrounded;
+
     // Start is called before the first frame update
     void Start()
     {
         myController = GetComponent<CharacterController>(); //Get controller on obj
+        rSpawner = GameObject.FindObjectOfType<respawnManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        gravityCheck();
         groundCheck();
         inputCheck();
-        gravityCheck();
         movementIn();
 
         //Jump input
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        //lastPos check
+        Ray ray = new Ray(transform.position, -transform.up);
+        RaycastHit rHit;
+        if (Physics.Raycast(ray, out rHit, groundMask))
+        {
+            if (rHit.transform.gameObject.tag == "Ground")
+            {
+                lastPos = rHit.transform;
+            }
+
         }
     }
     public void movementIn()
@@ -45,7 +61,7 @@ public class characterMovement : MonoBehaviour
     }
     public void gravityCheck()
     {
-        velocity.y += gravity * Time.deltaTime; 
+        velocity.y += gravity * Time.deltaTime;
 
         myController.Move(velocity * Time.deltaTime); //Apply gravity
     }
@@ -57,11 +73,20 @@ public class characterMovement : MonoBehaviour
     }
     public void groundCheck()
     {
-        isGrounded = Physics.Raycast(transform.position, -transform.up, groundDistance); //isGrounder raycast
+        isGrounded = Physics.Raycast(transform.position, -transform.up, groundDistance, groundMask); //isGrounded raycast
 
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = gravity; //Apply gravity for falling
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<deathFloor>())
+        {
+            rSpawner.resetPlayer(lastPos, this.gameObject);
+        }
+    }
+
 }
