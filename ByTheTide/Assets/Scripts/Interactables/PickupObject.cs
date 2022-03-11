@@ -4,27 +4,20 @@ using UnityEngine;
 
 public class PickupObject : MonoBehaviour
 {
-    private Vector3 mOffset;
+    public Transform dest;
 
-    private float mZCoord;
-
-    private void OnMouseDown()
+    void OnMouseDown()
     {
-        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        mOffset = gameObject.transform.position - GetMouseWorldPos();
+        //GetComponent<BoxCollider>().enabled = false;
+        GetComponent<Rigidbody>().useGravity = false;
+        this.transform.position = dest.position;
+        this.transform.parent = GameObject.Find("Destination").transform;
     }
 
-    private Vector3 GetMouseWorldPos()
+    void OnMouseUp()
     {
-        Vector3 mousePoint = Input.mousePosition;
-
-        mousePoint.z = mZCoord;
-
-        return Camera.main.ScreenToWorldPoint(mousePoint);
-    }
-
-    private void OnMouseDrag()
-    {
-        transform.position = GetMouseWorldPos() + mOffset;
+        this.transform.parent = null;
+        GetComponent<Rigidbody>().useGravity = true;
+        //GetComponent<BoxCollider>().enabled = true;
     }
 }

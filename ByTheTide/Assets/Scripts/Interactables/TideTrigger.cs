@@ -3,15 +3,17 @@ using UnityEngine;
 public class TideTrigger : MonoBehaviour
 {
     [SerializeField]
-    TideScript tide;
+    tdController tide;
 
     private void OnTriggerEnter(Collider col)
     {
-        tide.SetHighTide(true);
+        tide.SetDaySpeed(0);
+        tide.lowerTide();
     }
 
     private void OnTriggerExit(Collider col)
     {
-        tide.SetHighTide(false);
+        tide.SetDaySpeed(0);
+        tide.raiseTide();
     }
 }

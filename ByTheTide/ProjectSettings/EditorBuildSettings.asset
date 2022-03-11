@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/menuScenes/mainMenu.unity
     guid: 643ff4b1993d92f479b867040fe0c517
   - enabled: 1
-    path: Assets/Scenes/menuScenes/Credits.unity
-    guid: 12820a57a4be1224a8a168c1718e03ae
-  - enabled: 1
-    path: Assets/Scenes/JimmiesScenes/SceneA.unity
-    guid: 6efb61d147e16b048ba8fe59beee915a
+    path: Assets/Scenes/Hub Level/hub_level.unity
+    guid: f89aa8c4c724cad458740bb4579d61cf
   - enabled: 1
     path: Assets/Scenes/Tutorial Level/Tutorial.unity
     guid: d2c74e4a870c7a0488cf3f8d3afc18f4
+  - enabled: 1
+    path: Assets/Scenes/menuScenes/Credits.unity
+    guid: 12820a57a4be1224a8a168c1718e03ae
   m_configObjects: {}
