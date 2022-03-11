@@ -41,42 +41,9 @@ public class audioManager : MonoBehaviour
     {
         audSource.PlayOneShot(clipName);
     }
-
-    public void DeliverSound()
-    {
-        audSource.PlayOneShot(clips[0]);
-    }
-    public void DropSound()
-    {
-        audSource.PlayOneShot(clips[1]);
-    }
-    public void ThrowSound()
-    {
-        audSource.PlayOneShot(clips[2]);
-    }
-    public void BrokenSound()
-    {
-        audSource.PlayOneShot(clips[3]);
-    }
-    public void HornSound()
-    {
-        audSource.PlayOneShot(clips[4]);
-    }
-    public void JumpSound()
-    {
-        audSource.PlayOneShot(clips[5]);
-    }
-    public void CompleteSound()
-    {
-        audSource.PlayOneShot(clips[6]);
-    }
-    public void PickupSound()
-    {
-        audSource.PlayOneShot(clips[7]);
-    }
     public void PauseSound()
     {
-        audSource.PlayOneShot(clips[8]);
+        audSource.PlayOneShot(clips[0]);
     }
 }
 
