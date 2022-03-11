@@ -46,11 +46,7 @@ public class characterMovement : MonoBehaviour
         RaycastHit rHit;
         if (Physics.Raycast(ray, out rHit, groundMask))
         {
-            if (rHit.transform.gameObject.tag == "Ground")
-            {
-                lastPos = rHit.transform;
-            }
-
+            lastPos = rHit.transform;
         }
     }
     public void movementIn()
