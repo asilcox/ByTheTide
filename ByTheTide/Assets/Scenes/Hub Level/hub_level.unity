@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.4
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28739655, g: 0.32141548, b: 0.37493804, a: 0.4}
+  m_IndirectSpecularColor: {r: 0.072113775, g: 0.09028578, b: 0.12276947, a: 0.4}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -995,6 +995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 312640321}
+  - component: {fileID: 312640322}
   m_Layer: 0
   m_Name: RocksLowerLeft
   m_TagString: Untagged
@@ -1019,6 +1020,21 @@ Transform:
   m_Father: {fileID: 2065050711}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &312640322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312640320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d2f905ac1d07a4c97c8afe04c61fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHeight: 30
+  minHeight: -50
+  tideSpeed: 5
 --- !u!1 &317136005
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,6 +4034,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2585656767964076933, guid: 2a4eaaa218c394b40bfe2d6e622f79c9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4972800683384033588, guid: 2a4eaaa218c394b40bfe2d6e622f79c9, type: 3}
       propertyPath: m_Name
       value: playerObj
@@ -4074,7 +4094,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1292658643}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99c006508896d5247a3a23f9007ac4ad, type: 3}
   m_Name: 
@@ -4481,6 +4501,10 @@ PrefabInstance:
       propertyPath: SSS
       value: 
       objectReference: {fileID: 1292658644}
+    - target: {fileID: 2294668757550604916, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
+      propertyPath: LevelToLoad
+      value: Credits
+      objectReference: {fileID: 0}
     - target: {fileID: 8554291624958007036, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
       propertyPath: SSS
       value: 
@@ -5900,6 +5924,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1900812537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000012327710642, guid: d17c28d3e02f33040aabbba51a2118fd, type: 3}
+  m_PrefabInstance: {fileID: 1755638239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1900812538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900812537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d2f905ac1d07a4c97c8afe04c61fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHeight: 3
+  minHeight: 0
+  tideSpeed: -30
 --- !u!1 &1907508961
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ public class endLevelManager : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("nextLevelName");
+                SceneManager.LoadScene(nextLevelName);
             }
         }
     }

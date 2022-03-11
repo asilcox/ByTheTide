@@ -98,6 +98,11 @@ public class tdController : MonoBehaviour
 
     }
 
+    public void SetDaySpeed(float ds)
+    {
+        dnController.daySpeedMultiplier = ds;
+    }
+
     
     private void OnTriggerEnter(Collider other)
     {
