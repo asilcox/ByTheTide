@@ -111,7 +111,7 @@ public class UIController : MonoBehaviour
     }
     public void Pause()
     {
-        audioManager.instance.PauseSound();
+        //audioManager.instance.PauseSound();
         paused = !paused;
         if (paused == true)
         {
