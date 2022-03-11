@@ -21,13 +21,15 @@ public class endLevelManager : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            Debug.Log("hitting a player");
             PlayerPrefs.SetInt("levelsComplete", PlayerPrefs.GetInt("levelsComplete") + 1);
-            if(PlayerPrefs.GetInt("levelsComplete") >= 10)
+            if(PlayerPrefs.GetInt("levelsComplete") >= 100)
             {
                 //End game if all levels are complete
             }
             else
             {
+                Debug.Log("hitting a player");
                 SceneManager.LoadScene(nextLevelName);
             }
         }

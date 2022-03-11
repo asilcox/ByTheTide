@@ -7,13 +7,11 @@ public class TideTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        tide.SetDaySpeed(0);
-        tide.lowerTide();
+        Debug.Log("Contact with Pressure Plate");
     }
 
     private void OnTriggerExit(Collider col)
     {
-        tide.SetDaySpeed(0);
-        tide.raiseTide();
+        Debug.Log("Lost contact with Pressure Plate");
     }
 }
