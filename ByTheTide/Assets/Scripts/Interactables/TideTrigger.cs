@@ -3,15 +3,15 @@ using UnityEngine;
 public class TideTrigger : MonoBehaviour
 {
     [SerializeField]
-    TideScript tide;
+    tdController tide;
 
     private void OnTriggerEnter(Collider col)
     {
-        tide.SetHighTide(true);
+        Debug.Log("Contact with Pressure Plate");
     }
 
     private void OnTriggerExit(Collider col)
     {
-        tide.SetHighTide(false);
+        Debug.Log("Lost contact with Pressure Plate");
     }
 }

@@ -19,21 +19,6 @@ public class characterRotation : MonoBehaviour
     {
         getInput(); //Get mouse inputs by mose movement axis
         rotateTransform(); //Apply transform to parent model and camera
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            isPaused = !isPaused;
-            if (!isPaused)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Time.timeScale = 1;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Time.timeScale = 0;
-            }
-
-        }
     }
 
     public void getInput()
