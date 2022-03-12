@@ -21,6 +21,8 @@ public class playerStats : MonoBehaviour
     {
         if (livesRemaining == 1)
         {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             SceneManager.LoadScene("mainMenu");
         }
         else
