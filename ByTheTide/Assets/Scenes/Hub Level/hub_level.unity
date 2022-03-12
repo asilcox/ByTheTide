@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.4
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28739655, g: 0.32141548, b: 0.37493804, a: 0.4}
+  m_IndirectSpecularColor: {r: 0.09859013, g: 0.11293812, b: 0.13828175, a: 0.4}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -559,6 +559,10 @@ PrefabInstance:
       propertyPath: SSS
       value: 
       objectReference: {fileID: 1292658644}
+    - target: {fileID: 2294668757550604916, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 550170027}
     - target: {fileID: 8554291624958007036, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
       propertyPath: SSS
       value: 
@@ -933,6 +937,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114182925583747938, guid: d1f03074e612bbd4b84736d2d7aee882, type: 3}
       propertyPath: tileScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218260579059578, guid: d1f03074e612bbd4b84736d2d7aee882, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114218260579059578, guid: d1f03074e612bbd4b84736d2d7aee882, type: 3}
@@ -1744,6 +1752,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf5c716dea4419148879f65f4373d70d, type: 3}
+--- !u!1 &550170025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 550170026}
+  - component: {fileID: 550170028}
+  - component: {fileID: 550170027}
+  m_Layer: 5
+  m_Name: LevelEntry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &550170026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550170025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1943500203}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &550170027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550170025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 8
+    m_MaxSize: 80
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: '{ Text = null }'
+--- !u!222 &550170028
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550170025}
+  m_CullTransparentMesh: 1
 --- !u!1001 &552083492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4481,6 +4568,10 @@ PrefabInstance:
       propertyPath: SSS
       value: 
       objectReference: {fileID: 1292658644}
+    - target: {fileID: 2294668757550604916, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 550170027}
     - target: {fileID: 8554291624958007036, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
       propertyPath: SSS
       value: 
@@ -4607,6 +4698,10 @@ PrefabInstance:
       propertyPath: SSS
       value: 
       objectReference: {fileID: 1292658644}
+    - target: {fileID: 2294668757550604916, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 550170027}
     - target: {fileID: 8554291624958007036, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
       propertyPath: SSS
       value: 
@@ -5347,6 +5442,10 @@ PrefabInstance:
       propertyPath: SSS
       value: 
       objectReference: {fileID: 1292658644}
+    - target: {fileID: 2294668757550604916, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 550170027}
     - target: {fileID: 8554291624958007036, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
       propertyPath: SSS
       value: 
@@ -5964,6 +6063,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1451857120}
+  - {fileID: 550170026}
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6541,6 +6641,10 @@ PrefabInstance:
       propertyPath: SSS
       value: 
       objectReference: {fileID: 1292658644}
+    - target: {fileID: 2294668757550604916, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 550170027}
     - target: {fileID: 2294668757550604916, guid: 903bd89408692ba40ab41673b35dd8e4, type: 3}
       propertyPath: LevelToLoad
       value: Tutorial
