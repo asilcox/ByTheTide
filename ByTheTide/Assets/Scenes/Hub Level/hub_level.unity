@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.4
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06910744, g: 0.086357124, b: 0.119130135, a: 0.4}
+  m_IndirectSpecularColor: {r: 0.06910752, g: 0.0863572, b: 0.11913035, a: 0.4}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -3350,8 +3350,8 @@ MonoBehaviour:
   sliderVolume: {fileID: 1922227053}
   SS: {fileID: 540415056}
   musicAudioVolume: 0
-  introMusic: {fileID: 8300000, guid: cf16b1bde5bc46a449040336e526b910, type: 3}
-  LoopMusic: {fileID: 8300000, guid: edcb8488a2c19d84eb6b415bb37b5ed4, type: 3}
+  introMusic: {fileID: 0}
+  LoopMusic: {fileID: 0}
   MusicTimeSwitch: 103
   PlayMusicOnAwake: 1
   isPlying: 0
@@ -5028,11 +5028,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6819690638030010617, guid: 0576719b349f9314da096d270046601c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: ba634e28ae9653a4db3b15756a51a9c7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 77b05ed86b688fb4eb8c2fcc7a08b4cd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
