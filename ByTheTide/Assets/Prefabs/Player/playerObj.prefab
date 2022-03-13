@@ -348,7 +348,7 @@ MonoBehaviour:
   gravity: -9.81
   movementSpeed: 5
   velocity: {x: 0, y: 0, z: 0}
-  jumpHeight: 4
+  jumpHeight: 2
   z: 0
   x: 0
   groundDistance: 1.5
