@@ -44,7 +44,7 @@ public class characterMovement : MonoBehaviour
         //lastPos check
         Ray ray = new Ray(transform.position, -transform.up);
         RaycastHit rHit;
-        if(Physics.Raycast(ray, out rHit, groundMask))
+        if (Physics.Raycast(ray, out rHit, groundMask))
         {
             lastPos = rHit.transform;
         }
@@ -69,7 +69,7 @@ public class characterMovement : MonoBehaviour
     }
     public void groundCheck()
     {
-        isGrounded = Physics.Raycast(transform.position, -transform.up, groundDistance); //isGrounder raycast
+        isGrounded = Physics.Raycast(transform.position, -transform.up, groundDistance, groundMask); //isGrounded raycast
 
         if (isGrounded && velocity.y < 0)
         {
@@ -77,13 +77,12 @@ public class characterMovement : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(other.gameObject.GetComponent<deathFloor>())
-    //    {
-    //        rSpawner.resetPlayer(lastPos);
-    //        Destroy(gameObject);
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<deathFloor>())
+        {
+            rSpawner.resetPlayer(lastPos, this.gameObject);
+        }
+    }
 
 }

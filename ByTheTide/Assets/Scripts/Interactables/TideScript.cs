@@ -13,28 +13,29 @@ public class TideScript : MonoBehaviour
     [SerializeField]
     float tideSpeed = 1.0f;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isHighTide)
+        if (Input.GetKeyDown(KeyCode.Tab) && isHighTide)
         {
             isHighTide = false;
-            Debug.Log(isHighTide);
+            //Debug.Log(isHighTide);
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && !isHighTide)
+        else if (Input.GetKeyDown(KeyCode.Tab) && !isHighTide)
         {
             isHighTide = true;
-            Debug.Log(isHighTide);
+            //Debug.Log(isHighTide);
         }
 
         if (isHighTide && transform.position.y < maxHeight)
+        {
             transform.position += new Vector3(0.0f, tideSpeed * Time.deltaTime, 0.0f);
+            Debug.Log(isHighTide);
+        }
         if (!isHighTide && transform.position.y > minHeight)
+        {
             transform.position -= new Vector3(0.0f, tideSpeed * Time.deltaTime, 0.0f);
+            Debug.Log(isHighTide);
+        }
     }
 
     public void SetHighTide(bool ht)
