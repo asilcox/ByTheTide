@@ -39,6 +39,7 @@ public class characterMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            audioManager.instance.JumpSound();
         }
 
         //lastPos check
@@ -52,6 +53,7 @@ public class characterMovement : MonoBehaviour
     public void movementIn()
     {
         Vector3 move = transform.right * x + transform.forward * z; //Get movement directions
+        //audioManager.instance.RunSound(); //Movement audio-Status:Broken
 
         myController.Move(move * movementSpeed * Time.deltaTime); //Apply movement * movement speed
     }
