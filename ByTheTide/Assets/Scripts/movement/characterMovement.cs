@@ -10,6 +10,10 @@ public class characterMovement : MonoBehaviour
     [SerializeField] Vector3 velocity;
     [SerializeField] float jumpHeight;
 
+    private AudioSource AS;
+    [SerializeField] AudioClip RunningClip, JumpingClip, PickUpKeyClip, SplashClip;
+    private bool isMoving;
+
     [Header("Inputs")]
     [SerializeField] private float z;
     [SerializeField] private float x;
@@ -40,6 +44,10 @@ public class characterMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             audioManager.instance.JumpSound();
+            isJumping = true;
+            AS.clip = JumpingClip;
+            AS.Play();
+            Invoke("SoundWait", .75f);
         }
 
         //lastPos check
@@ -50,6 +58,7 @@ public class characterMovement : MonoBehaviour
             lastPos = rHit.transform;
         }
     }
+
     public void movementIn()
     {
         Vector3 move = transform.right * x + transform.forward * z; //Get movement directions
@@ -57,6 +66,7 @@ public class characterMovement : MonoBehaviour
 
         myController.Move(move * movementSpeed * Time.deltaTime); //Apply movement * movement speed
     }
+
     public void gravityCheck()
     {
         velocity.y += gravity * Time.deltaTime;
@@ -68,6 +78,43 @@ public class characterMovement : MonoBehaviour
     {
         x = Input.GetAxis("Horizontal"); //Hor movement keys
         z = Input.GetAxis("Vertical"); //Ver movement keys
+
+        if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") != 0)
+            isMoving = true;
+        else if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+            isMoving = false;
+
+        PlaySound();
+    }
+
+    private bool isPlaying, isJumping, isDead;
+
+    private void PlaySound()
+    {
+        if (!isDead)
+        {
+            if (isPlaying && isMoving)
+                return;
+            else
+                isPlaying = false;
+
+            if (isMoving && !isJumping)
+            {
+                AS.clip = RunningClip;
+                AS.Play();
+                isPlaying = true;
+            }
+        }
+    }
+    private void SoundWait()
+    {
+        if (!isDead)
+        isJumping = false;
+        else
+        {
+            AS.clip = SplashClip;
+            AS.Play();
+        }
     }
     public void groundCheck()
     {
@@ -79,12 +126,13 @@ public class characterMovement : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<deathFloor>())
+        if (other.gameObject.tag == "Water")
         {
-            rSpawner.resetPlayer(lastPos, this.gameObject);
+            SoundWait();
+            isDead = true;
         }
-    }*/
+    }
 
 }
