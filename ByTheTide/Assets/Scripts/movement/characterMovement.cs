@@ -3,7 +3,7 @@ using UnityEngine;
 public class characterMovement : MonoBehaviour
 {
     private CharacterController myController;
-    private respawnManager rSpawner;
+    //private respawnManager rSpawner;
     [Header("Speeds and forces")]
     [SerializeField] float gravity;
     [SerializeField] float movementSpeed;
@@ -24,7 +24,7 @@ public class characterMovement : MonoBehaviour
     void Start()
     {
         myController = GetComponent<CharacterController>(); //Get controller on obj
-        rSpawner = GameObject.FindObjectOfType<respawnManager>();
+        //rSpawner = GameObject.FindObjectOfType<respawnManager>();
     }
 
     // Update is called once per frame
@@ -77,12 +77,12 @@ public class characterMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<deathFloor>())
         {
             rSpawner.resetPlayer(lastPos, this.gameObject);
         }
-    }
+    }*/
 
 }
