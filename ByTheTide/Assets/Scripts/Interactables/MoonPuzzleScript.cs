@@ -4,6 +4,8 @@ public class MoonPuzzleScript : MonoBehaviour
 {
     private int prevIndex = 0;
     private int curIndex = 0;
+
+    public TideScript tide;
     
     public int GetPrevIndex() { return prevIndex; }
     public int GetCurIndex() { return curIndex; }
@@ -14,7 +16,7 @@ public class MoonPuzzleScript : MonoBehaviour
     public void CheckOrder()
     {
         if (curIndex - prevIndex != 1)
-            Debug.Log("Failed" + curIndex);
+            tide.SetHighTide(true);
         else
             Debug.Log("CorrectAnswer " + curIndex);
     }
