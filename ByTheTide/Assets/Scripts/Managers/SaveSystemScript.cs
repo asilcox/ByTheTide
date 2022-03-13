@@ -123,7 +123,7 @@ public class SaveSystemScript : MonoBehaviour
         }
 
         if (other.gameObject.tag == "Water")
-            CheckLives();
+            Invoke("CheckLives", .75f);
 
         if (other.gameObject.name == "endTrigger")
             CompletedLevel();
