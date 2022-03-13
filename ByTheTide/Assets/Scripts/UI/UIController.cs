@@ -43,20 +43,22 @@ public class UIController : MonoBehaviour
     public GameObject gameUI;
     public GameObject controlsPanel;
 
-    private void Update()
+    private void Start()
     {
+        Time.timeScale = 1;
         scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
         if (sceneName == "mainMenu" || sceneName == "Credits")
         {
-            Debug.Log("Scene is MM or Credits");
+            Cursor.lockState = CursorLockMode.None;
         }
-        else
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Pause();
-            }
+            Pause();
         }
     }
 

@@ -5,33 +5,17 @@ using UnityEngine.SceneManagement;
 public class endLevelManager : MonoBehaviour
 {
     [SerializeField] string nextLevelName;
-    // Start is called before the first frame update
-    void Start()
+    
+    private void LoadLevelWait()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SceneManager.LoadScene(nextLevelName);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            Debug.Log("hitting a player");
-            PlayerPrefs.SetInt("levelsComplete", PlayerPrefs.GetInt("levelsComplete") + 1);
-            if(PlayerPrefs.GetInt("levelsComplete") >= 100)
-            {
-                //End game if all levels are complete
-            }
-            else
-            {
-                Debug.Log("hitting a player");
-                SceneManager.LoadScene(nextLevelName);
-            }
+            Invoke("LoadLevelWait", .05f);
         }
     }
 }

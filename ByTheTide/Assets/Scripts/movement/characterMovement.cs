@@ -3,7 +3,7 @@ using UnityEngine;
 public class characterMovement : MonoBehaviour
 {
     private CharacterController myController;
-    private respawnManager rSpawner;
+    //private respawnManager rSpawner;
     [Header("Speeds and forces")]
     [SerializeField] float gravity;
     [SerializeField] float movementSpeed;
@@ -24,7 +24,7 @@ public class characterMovement : MonoBehaviour
     void Start()
     {
         myController = GetComponent<CharacterController>(); //Get controller on obj
-        rSpawner = GameObject.FindObjectOfType<respawnManager>();
+        //rSpawner = GameObject.FindObjectOfType<respawnManager>();
     }
 
     // Update is called once per frame
@@ -39,6 +39,7 @@ public class characterMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            audioManager.instance.JumpSound();
         }
 
         //lastPos check
@@ -52,6 +53,7 @@ public class characterMovement : MonoBehaviour
     public void movementIn()
     {
         Vector3 move = transform.right * x + transform.forward * z; //Get movement directions
+        //audioManager.instance.RunSound(); //Movement audio-Status:Broken
 
         myController.Move(move * movementSpeed * Time.deltaTime); //Apply movement * movement speed
     }
@@ -77,12 +79,12 @@ public class characterMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<deathFloor>())
         {
             rSpawner.resetPlayer(lastPos, this.gameObject);
         }
-    }
+    }*/
 
 }

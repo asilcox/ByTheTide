@@ -9759,12 +9759,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 388566489, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 388566489, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 380658955965153150, guid: 0576719b349f9314da096d270046601c, type: 2}
     - target: {fileID: 5357684318317003112, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: m_audioClip
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5357684318317003112, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5357684318317003112, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -9780,12 +9788,20 @@ PrefabInstance:
       objectReference: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
     - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: clips.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: clips.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 3814e145d8ef97d4da95286ac6f52e03, type: 3}
+    - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 647a7d5194d2b8941a38e5f716fb455d, type: 3}
+    - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 01c7cbcd3d33ccc41a9a43187c3040ec, type: 3}
     - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: clips.Array.data[8]
       value: 
