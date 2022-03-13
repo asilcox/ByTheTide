@@ -9,6 +9,7 @@ public class HUBmanger : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(HighLevel);
         anim = anim.GetComponent<Animator>();
         HighLevel = PlayerPrefs.GetInt("HighLevel");
         anim.SetInteger("HighLevel", HighLevel);

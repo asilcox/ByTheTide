@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         settingsMenu = GameObject.FindGameObjectWithTag("MainUI");
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void Settings()
