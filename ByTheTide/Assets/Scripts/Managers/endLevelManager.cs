@@ -13,6 +13,7 @@ public class endLevelManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("A player is here");
         if(other.gameObject.tag == "Player")
         {
             Invoke("LoadLevelWait", .05f);
