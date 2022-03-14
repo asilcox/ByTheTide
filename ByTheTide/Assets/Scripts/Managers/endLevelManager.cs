@@ -18,7 +18,7 @@ public class endLevelManager : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
     }
 
-        private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (scene.name == "churchysTestLevel")
         {
@@ -28,6 +28,13 @@ public class endLevelManager : MonoBehaviour
                 {
                     Invoke("LoadLevelWait", .05f);
                 }
+            }
+        }
+        else
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                Invoke("LoadLevelWait", .05f);
             }
         }
     }
