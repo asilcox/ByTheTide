@@ -49,6 +49,20 @@ public class characterMovement : MonoBehaviour
         {
             lastPos = rHit.transform;
         }
+
+        //SFX For walking
+        if (myController.velocity.magnitude >= 0.25)
+        {
+            if (!audioManager.instance.audSource.isPlaying)
+            {
+                audioManager.instance.RunSound();
+            }
+            else
+            {
+
+            }
+        }
+
     }
     public void movementIn()
     {

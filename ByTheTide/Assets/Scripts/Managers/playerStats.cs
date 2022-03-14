@@ -23,7 +23,7 @@ public class playerStats : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
-            //SceneManager.LoadScene("mainMenu");
+            SceneManager.LoadScene("mainMenu");
         }
         else
         {

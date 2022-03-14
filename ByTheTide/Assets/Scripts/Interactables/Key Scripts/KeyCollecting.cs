@@ -1,10 +1,11 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class KeyCollecting : MonoBehaviour
 {
     private int numKeys;
-
+    public int collectableKeys;
+    [SerializeField] GameObject endObj;
     [SerializeField]
     TextMeshProUGUI mText;
 
@@ -21,6 +22,15 @@ public class KeyCollecting : MonoBehaviour
 
     private void Update()
     {
-        mText.SetText("Keys Pieces: " + GetNumKeys());
+        if (collectableKeys == numKeys)
+        {
+            mText.text = "All key parts collected, Get to the boat!";
+            endObj.SetActive(true);
+        }
+        else
+        {
+            mText.SetText("Keys Pieces: " + GetNumKeys());
+        }
+
     }
 }
