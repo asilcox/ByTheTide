@@ -79,12 +79,12 @@ public class characterMovement : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<deathFloor>())
-        {
-            rSpawner.resetPlayer(lastPos, this.gameObject);
-        }
-    }*/
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.GetComponent<deathFloor>())
+    //    {
+    //        rSpawner.resetPlayer(lastPos, this.gameObject);
+    //    }
+    //}
 
 }

@@ -1908,7 +1908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 430197878}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: B O A T S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9699,6 +9699,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1193653576595968323, guid: 4d7af0ea961ebaa458f908832847b17b, type: 3}
+      propertyPath: m_text
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1193653578554948187, guid: 4d7af0ea961ebaa458f908832847b17b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11003,7 +11007,7 @@ GameObject:
   - component: {fileID: 1384136849}
   - component: {fileID: 1384136848}
   - component: {fileID: 1384136847}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: endTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11511,7 +11515,7 @@ PrefabInstance:
       objectReference: {fileID: 2618161745350514154, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
     - target: {fileID: 1306416373317131518, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2618161744813633194, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
       propertyPath: m_ClearFlags
@@ -11579,7 +11583,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437687485}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b93030bd5bf7d647a6cd82cf6f5370f, type: 3}
   m_Name: 
@@ -11598,8 +11602,16 @@ PrefabInstance:
       value: terrain_island
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6c658f9953e43a8418fc3bb3b0bad4f2, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6c658f9953e43a8418fc3bb3b0bad4f2, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6c658f9953e43a8418fc3bb3b0bad4f2, type: 3}
+      propertyPath: m_TagString
+      value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6c658f9953e43a8418fc3bb3b0bad4f2, type: 3}
       propertyPath: m_RootOrder
@@ -13191,6 +13203,10 @@ PrefabInstance:
       value: raft-flag (1)
       objectReference: {fileID: 0}
     - target: {fileID: 193654, guid: cb47b27a685f52542b2ac0a342ac8704, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 193654, guid: cb47b27a685f52542b2ac0a342ac8704, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -13528,7 +13544,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 194278, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 194278, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 3}
       propertyPath: m_TagString
@@ -13877,6 +13893,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 430197878}
     m_Modifications:
+    - target: {fileID: 100046, guid: cc3fdc7945f99ab4ead6c4161fe65b25, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: cc3fdc7945f99ab4ead6c4161fe65b25, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14020,6 +14040,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 430197878}
     m_Modifications:
+    - target: {fileID: 193654, guid: cb47b27a685f52542b2ac0a342ac8704, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 193654, guid: cb47b27a685f52542b2ac0a342ac8704, type: 3}
       propertyPath: m_IsActive
       value: 1
