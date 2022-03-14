@@ -3114,9 +3114,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 141502, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143364, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149080, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 155562, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 155632, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
       propertyPath: m_Name
       value: DayNightCycle_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 155632, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 477788, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
       propertyPath: m_RootOrder

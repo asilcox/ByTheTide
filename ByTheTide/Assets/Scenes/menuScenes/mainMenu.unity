@@ -9723,7 +9723,7 @@ PrefabInstance:
       objectReference: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
     - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: clips.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: clips.Array.data[0]
@@ -9737,6 +9737,14 @@ PrefabInstance:
       propertyPath: clips.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 01c7cbcd3d33ccc41a9a43187c3040ec, type: 3}
+    - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+      propertyPath: clips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 90da31db0d2f4584ebd1a8443b515aef, type: 3}
+    - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+      propertyPath: clips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 04b56da16b07c0d4cb5868630e5fdc73, type: 3}
     - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: clips.Array.data[8]
       value: 

@@ -18021,6 +18021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18f35b3597c644928bc6e3f3d9458d86, type: 3}
+--- !u!20 &1333495203 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2618161744813633194, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
+  m_PrefabInstance: {fileID: 2618161744738420848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1337557177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25991,9 +25996,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 141502, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143364, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149080, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 155562, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 155632, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
       propertyPath: m_Name
       value: DayNightCycle_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 155632, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 477788, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
       propertyPath: m_RootOrder
@@ -26039,6 +26064,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11442714, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: cameraToFollow
+      value: 
+      objectReference: {fileID: 1333495203}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
 --- !u!1001 &1836196605
