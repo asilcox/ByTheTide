@@ -5,18 +5,30 @@ using UnityEngine.SceneManagement;
 public class endLevelManager : MonoBehaviour
 {
     [SerializeField] string nextLevelName;
-    
+
+    private Scene scene;
+
     private void LoadLevelWait()
     {
         SceneManager.LoadScene(nextLevelName);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        Debug.Log("A player is here");
-        if(other.gameObject.tag == "Player")
+        Scene scene = SceneManager.GetActiveScene();
+    }
+
+        private void OnTriggerEnter(Collider other)
+    {
+        if (scene.name == "churchysTestLevel")
         {
-            Invoke("LoadLevelWait", .05f);
+            if (GameManager.instance.builtKey == true)
+            {
+                if (other.gameObject.tag == "Player")
+                {
+                    Invoke("LoadLevelWait", .05f);
+                }
+            }
         }
     }
 }

@@ -5116,6 +5116,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: boat-speed
       objectReference: {fileID: 0}
+    - target: {fileID: 5142040024209798775, guid: 22faefc6fc1373d44829a173981667b8, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142040024209798775, guid: 22faefc6fc1373d44829a173981667b8, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22faefc6fc1373d44829a173981667b8, type: 3}
 --- !u!1001 &15167321

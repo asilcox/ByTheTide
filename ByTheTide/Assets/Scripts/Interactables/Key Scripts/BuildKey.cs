@@ -35,6 +35,7 @@ public class BuildKey : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K) && nearPlayer)
         {
             fullKey.SetActive(true);
+            GameManager.instance.builtKey = true;
             // Play key built SFX here
         }
     }
