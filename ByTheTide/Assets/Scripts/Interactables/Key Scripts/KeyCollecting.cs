@@ -24,8 +24,8 @@ public class KeyCollecting : MonoBehaviour
     {
         if (collectableKeys == numKeys)
         {
-            mText.text = "All key parts collected, Get to the boat!";
-            endObj.SetActive(true);
+            mText.text = "All key parts collected, Go build the Key";
+            
         }
         else
         {

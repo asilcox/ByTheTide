@@ -15,7 +15,7 @@ public class SaveSystemScript : MonoBehaviour
 
     private TextMeshProUGUI LivesText;
 
-    private int Lives;
+    public int Lives;
     private int isDead;
 
     private int HighLevel;
