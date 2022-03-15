@@ -15,6 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial Level/Tutorial.unity
     guid: d2c74e4a870c7a0488cf3f8d3afc18f4
   - enabled: 1
+    path: Assets/Scenes/ChurchysScenes/churchysTestLevel.unity
+    guid: cc25a126c7402604c8f1f01e6dad9759
+  - enabled: 1
+    path: Assets/Scenes/PhilipLevel2/PhilipLevel2.unity
+    guid: 8f193468322800340b8972c5778492ef
+  - enabled: 1
+    path: Assets/Scenes/TimeAttack/T_A_Test.unity
+    guid: c9de09e18b8eb634cb7c3749f2e918c7
+  - enabled: 1
     path: Assets/Scenes/menuScenes/Credits.unity
     guid: 12820a57a4be1224a8a168c1718e03ae
   m_configObjects: {}

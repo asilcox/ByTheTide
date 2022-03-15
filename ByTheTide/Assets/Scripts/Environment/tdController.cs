@@ -17,7 +17,6 @@ public class tdController : MonoBehaviour
     [SerializeField] tideStates tStates;
     [Header("Get day night sys")]
     [SerializeField] DayNightController dnController;
-    
     private void Start()
     {
         uManager = GameObject.FindObjectOfType<UIManager>();
@@ -47,14 +46,28 @@ public class tdController : MonoBehaviour
                     if (Input.GetKey(KeyCode.T))
                     {
                         //Call raise tide function
-                        
+                        if(audioManager.instance.audSource.isPlaying == false)
+                        {
+                            audioManager.instance.tideSound();
+                        }
+                        else
+                        {
+
+                        }
                         raiseTide();
                     }
 
                     if (Input.GetKey(KeyCode.G))
                     {
                         //Call lower tide function
-                        
+                        if (audioManager.instance.audSource.isPlaying == false)
+                        {
+                            audioManager.instance.tideSound();
+                        }
+                        else
+                        {
+
+                        }
                         lowerTide();
                     }
 

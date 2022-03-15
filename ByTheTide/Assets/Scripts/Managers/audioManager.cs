@@ -35,7 +35,7 @@ public class audioManager : MonoBehaviour
 
     public AudioMixer _MasterMixer;
     public static audioManager audioMan;
-    [SerializeField] AudioSource audSource;
+    [SerializeField] public AudioSource audSource;
 
     public void PlaySound(AudioClip clipName)
     {
@@ -69,6 +69,11 @@ public class audioManager : MonoBehaviour
     public void PressureplateSound()
     {
         audSource.PlayOneShot(clips[5]);
+    }
+
+    public void tideSound()
+    {
+        audSource.PlayOneShot(clips[6]);
     }
 
 }

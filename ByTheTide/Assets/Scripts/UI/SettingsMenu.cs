@@ -13,17 +13,36 @@ public class SettingsMenu : MonoBehaviour
     public Slider sfxSlider;
 
     #endregion
+
+    private int FirstPlaythrough;
+
     void Start()
     {
-        masterSlider.value = PlayerPrefs.GetFloat("masterVol", 0.75f);
-        bgmSlider.value = PlayerPrefs.GetFloat("bgmVolume", 0.75f);
-        sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume", 0.75f);
+        FirstPlaythrough = PlayerPrefs.GetInt("FirstTime", FirstPlaythrough);
+
+        if (FirstPlaythrough == 0)
+        {
+            masterSlider.value = 0.75f;
+            PlayerPrefs.SetFloat("masterVol", masterSlider.value);
+            bgmSlider.value = 0.75f;
+            PlayerPrefs.SetFloat("bgmVolume", bgmSlider.value);
+            sfxSlider.value = 0.75f;
+            PlayerPrefs.SetFloat("sfxVolume", sfxSlider.value);
+
+            PlayerPrefs.SetInt("FirstTime", 1);
+        }
+        else
+        {
+            sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
+            bgmSlider.value = PlayerPrefs.GetFloat("bgmVolume");
+            masterSlider.value = PlayerPrefs.GetFloat("masterVol");
+        }
     }
 
     public void SetMasterVolume(float sliderValue)
     {
         master.SetFloat("masterVol", Mathf.Log10(sliderValue) * 20);
-        PlayerPrefs.SetFloat("", sliderValue);
+        PlayerPrefs.SetFloat("masterVol", sliderValue);
     }
 
     public void SetBGMVolume(float sliderValue)
