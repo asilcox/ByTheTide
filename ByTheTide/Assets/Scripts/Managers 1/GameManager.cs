@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
     {
         scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
-        PlayerPrefs.DeleteAll();
     }
 
     public bool Playing

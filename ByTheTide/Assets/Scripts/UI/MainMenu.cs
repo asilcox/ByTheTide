@@ -21,7 +21,21 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        //settingsMenu.GetComponent<UIController>().gameUI.SetActive(true);
+        float soundVol = PlayerPrefs.GetFloat("sfxVolume");
+        float musicVol = PlayerPrefs.GetFloat("bgmVolume");
+        float masterVol = PlayerPrefs.GetFloat("masterVol");
+
+        PlayerPrefs.DeleteAll();
+
+        PlayerPrefs.SetFloat("bgmVolume", musicVol);
+        PlayerPrefs.SetFloat("sfxVolume", soundVol);
+        PlayerPrefs.SetFloat("masterVol", masterVol);
+
+        SceneManager.LoadScene(1);
+    }
+
+    public void LoadGame()
+    {
         SceneManager.LoadScene(1);
     }
 

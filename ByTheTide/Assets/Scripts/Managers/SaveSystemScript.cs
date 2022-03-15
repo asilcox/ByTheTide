@@ -99,9 +99,14 @@ public class SaveSystemScript : MonoBehaviour
             PlayerPrefs.SetFloat("CurRotY", 0);
             PlayerPrefs.SetFloat("CurRotZ", 0);
 
+            Lives = 3;
             PlayerPrefs.SetInt("Lives", 3);
-            gameObject.transform.position = HubIslandPos;
-            gameObject.transform.Rotate(HubIslandRot);
+
+            if (CurLevel != 0 && HighLevel != 0)
+            {
+                gameObject.transform.position = HubIslandPos;
+                gameObject.transform.Rotate(HubIslandRot);
+            }
 
             curCheckpointName = "";
             PlayerPrefs.SetString("curCheckpointName", curCheckpointName);
@@ -198,7 +203,7 @@ public class SaveSystemScript : MonoBehaviour
             PlayerPrefs.SetFloat("CurRotX", 0);
             PlayerPrefs.SetFloat("CurRotY", 0);
             PlayerPrefs.SetFloat("CurRotZ", 0);
-            GameManager.instance.LoadScene("hub_level");
+            SceneManager.LoadScene("hub_level");
             PlayerPrefs.SetInt("Lives", 3);
             return;
         }

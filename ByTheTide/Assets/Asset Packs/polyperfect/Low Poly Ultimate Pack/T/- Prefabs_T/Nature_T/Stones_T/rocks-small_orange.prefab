@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4000013394088876}
   - component: {fileID: 33000013079724054}
   - component: {fileID: 23000010062778002}
-  - component: {fileID: 1324983787904911314}
   m_Layer: 0
   m_Name: rocks-small_orange
   m_TagString: Untagged
@@ -82,16 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1324983787904911314
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012327710642}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1137661, y: 0.19025095, z: 1.0488368}
-  m_Center: {x: -0.017763406, y: 0.04309794, z: 0.052948516}
