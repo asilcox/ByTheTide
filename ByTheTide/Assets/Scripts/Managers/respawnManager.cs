@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class respawnManager : MonoBehaviour
 {
-    private playerStats pStates;
+    private playerStats pStats;
 
     private void Start()
     {
-        pStates = GetComponent<playerStats>();
+        pStats = GetComponent<playerStats>();
     }
     public void resetPlayer(Transform lastObj, GameObject playerObject)
     {
@@ -19,6 +19,6 @@ public class respawnManager : MonoBehaviour
         //Turns on character controller
         playerObject.GetComponent<CharacterController>().enabled = true;
 
-        pStates.loseLife();
+        //pStats.loseLife();
     }
 }

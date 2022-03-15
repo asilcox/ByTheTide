@@ -24,7 +24,7 @@ public class characterMovement : MonoBehaviour
     void Start()
     {
         myController = GetComponent<CharacterController>(); //Get controller on obj
-        //rSpawner = GameObject.FindObjectOfType<respawnManager>();
+        //rSpawner = GetComponent<respawnManager>();
     }
 
     // Update is called once per frame
@@ -49,11 +49,24 @@ public class characterMovement : MonoBehaviour
         {
             lastPos = rHit.transform;
         }
+
+        //SFX For walking
+        if (myController.velocity.magnitude >= 0.25)
+        {
+            if (!audioManager.instance.audSource.isPlaying)
+            {
+                audioManager.instance.RunSound();
+            }
+            else
+            {
+
+            }
+        }
+
     }
     public void movementIn()
     {
         Vector3 move = transform.right * x + transform.forward * z; //Get movement directions
-        //audioManager.instance.RunSound(); //Movement audio-Status:Broken
 
         myController.Move(move * movementSpeed * Time.deltaTime); //Apply movement * movement speed
     }
@@ -79,12 +92,12 @@ public class characterMovement : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<deathFloor>())
-        {
-            rSpawner.resetPlayer(lastPos, this.gameObject);
-        }
-    }*/
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.GetComponent<deathFloor>())
+    //    {
+    //        rSpawner.resetPlayer(lastPos, this.gameObject);
+    //    }
+    //}
 
 }

@@ -15,9 +15,9 @@ public class SaveSystemScript : MonoBehaviour
 
     private TextMeshProUGUI LivesText;
 
-    private int Lives;
+    public int Lives;
     private int isDead;
-    
+
     private int HighLevel;
     private int CurLevel;
 
@@ -29,9 +29,11 @@ public class SaveSystemScript : MonoBehaviour
 
         if (scene.name == "Tutorial")
             CurLevel = 0;
-        else if (scene.name == "Level 1")
+        else if (scene.name == "churchysTestLevel")
             CurLevel = 1;
-            CC = GetComponent<CharacterController>();
+        else if (scene.name == "PhilipLevel2")
+            CurLevel = 2;
+        CC = GetComponent<CharacterController>();
 
         Lives = PlayerPrefs.GetInt("Lives");
 
@@ -123,7 +125,7 @@ public class SaveSystemScript : MonoBehaviour
         }
 
         if (other.gameObject.tag == "Water")
-            CheckLives();
+            Invoke("CheckLives", .75f);
 
         if (other.gameObject.name == "endTrigger")
             CompletedLevel();
@@ -146,7 +148,7 @@ public class SaveSystemScript : MonoBehaviour
         PlayerPrefs.SetFloat("CurRotY", SaveCurRot.y);
         PlayerPrefs.SetFloat("CurRotZ", SaveCurRot.z);
 
-        if (curCheckPointGO!=null)
+        if (curCheckPointGO != null)
             curCheckPointGO.SetActive(false);
     }
 
@@ -186,7 +188,7 @@ public class SaveSystemScript : MonoBehaviour
             PlayerPrefs.SetInt("Lives", Lives);
         }
 
-        if (Lives < 0)
+        if (Lives == 0)
         {
             isDead = 1;
             PlayerPrefs.SetFloat("CurPosX", 0);
@@ -196,8 +198,9 @@ public class SaveSystemScript : MonoBehaviour
             PlayerPrefs.SetFloat("CurRotX", 0);
             PlayerPrefs.SetFloat("CurRotY", 0);
             PlayerPrefs.SetFloat("CurRotZ", 0);
-
+            GameManager.instance.LoadScene("hub_level");
             PlayerPrefs.SetInt("Lives", 3);
+            return;
         }
 
         SceneManager.LoadScene(scene.name);
