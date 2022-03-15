@@ -9019,6 +9019,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &914575891 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 388566489, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+  m_PrefabInstance: {fileID: 1156407969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &918340403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9705,6 +9710,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: audioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+      propertyPath: audSource
+      value: 
+      objectReference: {fileID: 914575891}
     - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: _MasterMixer
       value: 
