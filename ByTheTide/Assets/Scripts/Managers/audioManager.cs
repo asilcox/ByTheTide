@@ -71,5 +71,10 @@ public class audioManager : MonoBehaviour
         audSource.PlayOneShot(clips[5]);
     }
 
+    public void tideSound()
+    {
+        audSource.PlayOneShot(clips[6]);
+    }
+
 }
 
