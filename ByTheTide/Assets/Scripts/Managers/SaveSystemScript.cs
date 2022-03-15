@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Text.RegularExpressions;
+using TMPro;
 
 public class SaveSystemScript : MonoBehaviour
 {
@@ -13,9 +13,11 @@ public class SaveSystemScript : MonoBehaviour
 
     private CharacterController CC;
 
-    private int Lives;
+    private TextMeshProUGUI LivesText;
+
+    public int Lives;
     private int isDead;
-    
+
     private int HighLevel;
     private int CurLevel;
 
@@ -24,10 +26,19 @@ public class SaveSystemScript : MonoBehaviour
     private void Start()
     {
         Scene scene = SceneManager.GetActiveScene();
-        CurLevel = scene.buildIndex;
+
+        if (scene.name == "Tutorial")
+            CurLevel = 0;
+        else if (scene.name == "churchysTestLevel")
+            CurLevel = 1;
+        else if (scene.name == "PhilipLevel2")
+            CurLevel = 2;
         CC = GetComponent<CharacterController>();
 
         Lives = PlayerPrefs.GetInt("Lives");
+
+        GameObject go_HUD = GameObject.Find("livesCounter(PlaceHolder)");
+        LivesText = go_HUD.GetComponent<TextMeshProUGUI>();
 
         if (scene.name != "hub_level")
         {
@@ -51,10 +62,15 @@ public class SaveSystemScript : MonoBehaviour
                     curCheckPointGO.SetActive(false);
                 }
 
-                Debug.Log(SaveCurRot);
-
-                gameObject.transform.position = SaveCurPos;
-                gameObject.transform.Rotate(SaveCurRot);
+                if ((SaveCurPos.y != 0 && SaveCurPos.x != 0) || (SaveCurPos.z != 0 && SaveCurPos.x != 0) || (SaveCurPos.y != 0 && SaveCurPos.z != 0))
+                {
+                    gameObject.transform.position = SaveCurPos;
+                    gameObject.transform.Rotate(SaveCurRot);
+                }
+                else
+                {
+                    SaveCheckPoint();
+                }
                 CC.enabled = true;
             }
             SaveCheckPoint();
@@ -75,6 +91,14 @@ public class SaveSystemScript : MonoBehaviour
             HubIslandRot.y = PlayerPrefs.GetFloat("HubIslandRotY", HubIslandRot.y);
             HubIslandRot.z = PlayerPrefs.GetFloat("HubIslandRotZ", HubIslandRot.z);
 
+            PlayerPrefs.SetFloat("CurPosX", 0);
+            PlayerPrefs.SetFloat("CurPosY", 0);
+            PlayerPrefs.SetFloat("CurPosZ", 0);
+
+            PlayerPrefs.SetFloat("CurRotX", 0);
+            PlayerPrefs.SetFloat("CurRotY", 0);
+            PlayerPrefs.SetFloat("CurRotZ", 0);
+
             PlayerPrefs.SetInt("Lives", 3);
             gameObject.transform.position = HubIslandPos;
             gameObject.transform.Rotate(HubIslandRot);
@@ -82,6 +106,8 @@ public class SaveSystemScript : MonoBehaviour
             curCheckpointName = "";
             PlayerPrefs.SetString("curCheckpointName", curCheckpointName);
         }
+        Debug.Log(gameObject.transform.position);
+        LivesText.text = Lives.ToString();
     }
 
     private GameObject curCheckPointGO;
@@ -98,8 +124,11 @@ public class SaveSystemScript : MonoBehaviour
             SaveCheckPoint();
         }
 
-        if (other.gameObject.tag == "Hazard")
-            CheckLives();
+        if (other.gameObject.tag == "Water")
+            Invoke("CheckLives", .75f);
+
+        if (other.gameObject.name == "endTrigger")
+            CompletedLevel();
     }
 
     private void SaveCheckPoint()
@@ -119,7 +148,8 @@ public class SaveSystemScript : MonoBehaviour
         PlayerPrefs.SetFloat("CurRotY", SaveCurRot.y);
         PlayerPrefs.SetFloat("CurRotZ", SaveCurRot.z);
 
-        curCheckPointGO.SetActive(false);
+        if (curCheckPointGO != null)
+            curCheckPointGO.SetActive(false);
     }
 
     public void CompletedLevel()
@@ -158,7 +188,7 @@ public class SaveSystemScript : MonoBehaviour
             PlayerPrefs.SetInt("Lives", Lives);
         }
 
-        if (Lives < 0)
+        if (Lives == 0)
         {
             isDead = 1;
             PlayerPrefs.SetFloat("CurPosX", 0);
@@ -168,10 +198,11 @@ public class SaveSystemScript : MonoBehaviour
             PlayerPrefs.SetFloat("CurRotX", 0);
             PlayerPrefs.SetFloat("CurRotY", 0);
             PlayerPrefs.SetFloat("CurRotZ", 0);
-
+            GameManager.instance.LoadScene("hub_level");
             PlayerPrefs.SetInt("Lives", 3);
+            return;
         }
 
-        SceneManager.LoadScene(CurLevel);
+        SceneManager.LoadScene(scene.name);
     }
 }

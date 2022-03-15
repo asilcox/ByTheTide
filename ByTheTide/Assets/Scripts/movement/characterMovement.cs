@@ -3,7 +3,7 @@ using UnityEngine;
 public class characterMovement : MonoBehaviour
 {
     private CharacterController myController;
-    private respawnManager rSpawner;
+    //private respawnManager rSpawner;
     [Header("Speeds and forces")]
     [SerializeField] float gravity;
     [SerializeField] float movementSpeed;
@@ -24,7 +24,7 @@ public class characterMovement : MonoBehaviour
     void Start()
     {
         myController = GetComponent<CharacterController>(); //Get controller on obj
-        rSpawner = GameObject.FindObjectOfType<respawnManager>();
+        //rSpawner = GetComponent<respawnManager>();
     }
 
     // Update is called once per frame
@@ -39,6 +39,7 @@ public class characterMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            audioManager.instance.JumpSound();
         }
 
         //lastPos check
@@ -48,6 +49,20 @@ public class characterMovement : MonoBehaviour
         {
             lastPos = rHit.transform;
         }
+
+        //SFX For walking
+        if (myController.velocity.magnitude >= 0.25)
+        {
+            if (!audioManager.instance.audSource.isPlaying)
+            {
+                audioManager.instance.RunSound();
+            }
+            else
+            {
+
+            }
+        }
+
     }
     public void movementIn()
     {
@@ -77,12 +92,12 @@ public class characterMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<deathFloor>())
-        {
-            rSpawner.resetPlayer(lastPos, this.gameObject);
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.GetComponent<deathFloor>())
+    //    {
+    //        rSpawner.resetPlayer(lastPos, this.gameObject);
+    //    }
+    //}
 
 }

@@ -35,7 +35,7 @@ public class audioManager : MonoBehaviour
 
     public AudioMixer _MasterMixer;
     public static audioManager audioMan;
-    [SerializeField] AudioSource audSource;
+    [SerializeField] public AudioSource audSource;
 
     public void PlaySound(AudioClip clipName)
     {
@@ -45,5 +45,31 @@ public class audioManager : MonoBehaviour
     {
         audSource.PlayOneShot(clips[0]);
     }
+
+    public void JumpSound()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void RunSound()
+    {
+        audSource.PlayOneShot(clips[2]);
+    }
+
+    public void DeathSound()
+    {
+        audSource.PlayOneShot(clips[3]);
+    }
+
+    public void KeySound()
+    {
+        audSource.PlayOneShot(clips[4]);
+    }
+
+    public void PressureplateSound()
+    {
+        audSource.PlayOneShot(clips[5]);
+    }
+
 }
 

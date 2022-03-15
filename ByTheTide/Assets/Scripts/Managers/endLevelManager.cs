@@ -1,36 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class endLevelManager : MonoBehaviour
 {
     [SerializeField] string nextLevelName;
-    // Start is called before the first frame update
-    void Start()
+
+    private Scene scene;
+
+    private void LoadLevelWait()
     {
-        
+        SceneManager.LoadScene(nextLevelName);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        Scene scene = SceneManager.GetActiveScene();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (scene.name == "churchysTestLevel")
         {
-            Debug.Log("hitting a player");
-            PlayerPrefs.SetInt("levelsComplete", PlayerPrefs.GetInt("levelsComplete") + 1);
-            if(PlayerPrefs.GetInt("levelsComplete") >= 100)
+            if (GameManager.instance.builtKey == true)
             {
-                //End game if all levels are complete
+                if (other.gameObject.tag == "Player")
+                {
+                    Invoke("LoadLevelWait", .05f);
+                }
             }
-            else
+            if (scene.name != "churchysTestLevel")
             {
-                Debug.Log("hitting a player");
-                SceneManager.LoadScene(nextLevelName);
+                if (other.gameObject.tag == "Player")
+                {
+                    Invoke("LoadLevelWait", .05f);
+                }
             }
         }
     }

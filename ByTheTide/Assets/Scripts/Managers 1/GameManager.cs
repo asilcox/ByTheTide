@@ -35,12 +35,14 @@ public class GameManager : MonoBehaviour
     Scene scene;
     string sceneName;
     bool bPlaying;
+    public bool builtKey = false;
 
     //Grabs current scene for reference
     private void Start()
     {
         scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
+        PlayerPrefs.DeleteAll();
     }
 
     public bool Playing
