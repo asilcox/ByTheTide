@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class endLevelManager : MonoBehaviour
@@ -29,12 +27,12 @@ public class endLevelManager : MonoBehaviour
                     Invoke("LoadLevelWait", .05f);
                 }
             }
-        }
-        else
-        {
-            if (other.gameObject.tag == "Player")
+            if (scene.name != "churchysTestLevel")
             {
-                Invoke("LoadLevelWait", .05f);
+                if (other.gameObject.tag == "Player")
+                {
+                    Invoke("LoadLevelWait", .05f);
+                }
             }
         }
     }

@@ -8,7 +8,8 @@ public class KeyScript : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            // Play key collecting SFX here
+            
+            audioManager.instance.KeySound();
             kc.IncrementKeys();
             gameObject.SetActive(false);
         }

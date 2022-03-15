@@ -35,7 +35,7 @@ public class audioManager : MonoBehaviour
 
     public AudioMixer _MasterMixer;
     public static audioManager audioMan;
-    [SerializeField] AudioSource audSource;
+    [SerializeField] public AudioSource audSource;
 
     public void PlaySound(AudioClip clipName)
     {
