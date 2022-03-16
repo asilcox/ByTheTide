@@ -9,6 +9,11 @@ public class KeyCollecting : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI mText;
 
+    private void Start()
+    {
+        numKeys = PlayerPrefs.GetInt("CurIndex", numKeys);
+    }
+
     public int GetNumKeys()
     {
         return numKeys;
@@ -17,6 +22,7 @@ public class KeyCollecting : MonoBehaviour
     public void IncrementKeys()
     {
         numKeys++;
+        PlayerPrefs.SetInt("CurIndex", numKeys);
         Debug.Log(numKeys);
     }
 
@@ -33,4 +39,6 @@ public class KeyCollecting : MonoBehaviour
         }
 
     }
+
+
 }

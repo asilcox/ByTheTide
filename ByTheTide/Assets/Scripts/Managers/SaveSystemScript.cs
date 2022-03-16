@@ -21,16 +21,39 @@ public class SaveSystemScript : MonoBehaviour
     private int HighLevel;
     private int CurLevel;
 
+    private int TutFirst;
+
     private string curCheckpointName;
 
     private void Start()
     {
         Scene scene = SceneManager.GetActiveScene();
 
+        TutFirst = PlayerPrefs.GetInt("TutFirst");
+        HighLevel = PlayerPrefs.GetInt("HighLevel", HighLevel);
+
         if (scene.name == "Tutorial")
+        {
             CurLevel = 0;
+            if (TutFirst == 0)
+                PlayerPrefs.SetInt("CurIndex", 0);
+
+            PlayerPrefs.SetInt("TutFirst", 1);
+        }
         else if (scene.name == "churchysTestLevel")
+        {
             CurLevel = 1;
+            if (TutFirst == 0)
+            {
+                PlayerPrefs.SetInt("CurIndex", 0);
+                PlayerPrefs.DeleteKey("KeyKeyPiece1");
+                PlayerPrefs.DeleteKey("KeyKeyPiece2");
+                PlayerPrefs.DeleteKey("KeyKeyPiece3");
+                PlayerPrefs.DeleteKey("KeyKeyPiece4");
+            }
+
+            PlayerPrefs.SetInt("TutFirst", 1);
+        }
         else if (scene.name == "PhilipLevel2")
             CurLevel = 2;
         CC = GetComponent<CharacterController>();
@@ -83,6 +106,8 @@ public class SaveSystemScript : MonoBehaviour
         }
         else
         {
+            PlayerPrefs.SetInt("TutFirst", 0);
+
             HubIslandPos.x = PlayerPrefs.GetFloat("HubIslandPosX", HubIslandPos.x);
             HubIslandPos.y = PlayerPrefs.GetFloat("HubIslandPosY", HubIslandPos.y);
             HubIslandPos.z = PlayerPrefs.GetFloat("HubIslandPosZ", HubIslandPos.z);
@@ -102,7 +127,7 @@ public class SaveSystemScript : MonoBehaviour
             Lives = 3;
             PlayerPrefs.SetInt("Lives", 3);
 
-            if (CurLevel != 0 && HighLevel != 0)
+            if (CurLevel != 0 || HighLevel != 0)
             {
                 gameObject.transform.position = HubIslandPos;
                 gameObject.transform.Rotate(HubIslandRot);
@@ -111,7 +136,7 @@ public class SaveSystemScript : MonoBehaviour
             curCheckpointName = "";
             PlayerPrefs.SetString("curCheckpointName", curCheckpointName);
         }
-        Debug.Log(gameObject.transform.position);
+        
         LivesText.text = Lives.ToString();
     }
 
