@@ -4,32 +4,34 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class devNavigator : MonoBehaviour
 {
-    [SerializeField] GameObject devNav;
+    [SerializeField] private devPan devNav;
     // Start is called before the first frame update
     void Start()
     {
-        
+        devNav = GameObject.FindObjectOfType<devPan>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        var gameObj = devNav.gameObject;
         if(Input.GetKeyDown(KeyCode.L))
         {
-            if(devNav.activeSelf == false)
+            if(gameObj.activeSelf == false)
             {
-                devNav.SetActive(true);
+                gameObj.SetActive(true);
             }
             else
             {
-                devNav.SetActive(false);
+                gameObj.SetActive(false);
             }
         }
     }
 
     public void loadSceneByName(string sceneName)
     {
-        devNav.SetActive(false);
+        var gameObj = devNav.gameObject;
+        gameObj.SetActive(false);
         SceneManager.LoadScene(sceneName);
     }
 }
