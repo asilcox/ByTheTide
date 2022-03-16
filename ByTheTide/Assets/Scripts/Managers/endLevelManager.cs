@@ -27,12 +27,12 @@ public class endLevelManager : MonoBehaviour
                     Invoke("LoadLevelWait", .05f);
                 }
             }
-            if (scene.name != "churchysTestLevel")
+        }
+        if (scene.name != "churchysTestLevel")
+        {
+            if (other.gameObject.tag == "Player")
             {
-                if (other.gameObject.tag == "Player")
-                {
-                    Invoke("LoadLevelWait", .05f);
-                }
+                Invoke("LoadLevelWait", .05f);
             }
         }
     }

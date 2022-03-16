@@ -4,6 +4,7 @@ public class MoonPuzzleScript : MonoBehaviour
 {
     private int prevIndex = 0;
     private int curIndex = 0;
+    private int SaveIndex;
 
     public TideScript tide;
     
@@ -12,6 +13,13 @@ public class MoonPuzzleScript : MonoBehaviour
 
     public void SetPrevIndex(int i) { prevIndex = i; }
     public void SetCurIndex(int i) { curIndex = i; }
+
+    private void Start()
+    {
+        curIndex = PlayerPrefs.GetInt("CurIndex");
+        prevIndex = curIndex-1;
+        CheckOrder();
+    }
 
     public void CheckOrder()
     {

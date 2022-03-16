@@ -7,6 +7,7 @@ public class MoonPuzzleTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
+        PlayerPrefs.SetInt("CurIndex", digit);
         moonPuzzle.SetCurIndex(digit);
         moonPuzzle.CheckOrder();
         moonPuzzle.SetPrevIndex(digit);
