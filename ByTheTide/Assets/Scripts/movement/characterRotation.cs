@@ -15,7 +15,7 @@ public class characterRotation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void  FixedUpdate()
+    void  Update()
     {
         getInput(); //Get mouse inputs by mose movement axis
         rotateTransform(); //Apply transform to parent model and camera
