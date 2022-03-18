@@ -8,7 +8,7 @@ public class tideSequencer : MonoBehaviour
     [SerializeField] public tideStatus tideStateStatus;
     [SerializeField] GameObject[] tideObjs;
     [SerializeField] public int identifier;
-
+    [SerializeField] GameObject[] rainObjects;
     private DayNightController dnController;
     private GameObject player;
     // Start is called before the first frame update
@@ -56,6 +56,10 @@ public class tideSequencer : MonoBehaviour
     public void switchToTwo()
     {
         transition();
+        foreach (GameObject gObj in rainObjects)
+        {
+            gObj.SetActive(false);
+        }
         player.transform.SetParent(null);
         tideStateStatus = tideStatus.tideTwoAct; ;
     }
