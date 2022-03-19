@@ -17,12 +17,18 @@ public class MoonPuzzleScript : MonoBehaviour
     private void Start()
     {
         curIndex = PlayerPrefs.GetInt("CurIndex");
-        prevIndex = curIndex-1;
-        CheckOrder();
+        Debug.Log("totals = " + (curIndex - prevIndex));
+        if (curIndex != 0)
+        {
+            prevIndex = curIndex - 1;
+            CheckOrder();
+        }
     }
 
     public void CheckOrder()
     {
+        Debug.Log("totals = " + (curIndex - prevIndex));
+
         if (curIndex - prevIndex != 1)
             tide.SetHighTide(true);
         else

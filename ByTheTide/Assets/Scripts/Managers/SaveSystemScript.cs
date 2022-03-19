@@ -35,8 +35,6 @@ public class SaveSystemScript : MonoBehaviour
         if (scene.name == "Tutorial")
         {
             CurLevel = 0;
-            if (TutFirst == 0)
-                PlayerPrefs.SetInt("CurIndex", 0);
 
             PlayerPrefs.SetInt("TutFirst", 1);
         }
@@ -106,6 +104,8 @@ public class SaveSystemScript : MonoBehaviour
         }
         else
         {
+            PlayerPrefs.DeleteKey("CurIndex");
+
             PlayerPrefs.SetInt("TutFirst", 0);
 
             HubIslandPos.x = PlayerPrefs.GetFloat("HubIslandPosX", HubIslandPos.x);
@@ -140,14 +140,21 @@ public class SaveSystemScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Scene scene = SceneManager.GetActiveScene();
+
         if (other.gameObject.tag == "CheckPoint")
         {
-            curCheckpointName = other.gameObject.name;
-            PlayerPrefs.SetString("curCheckpointName", curCheckpointName);
-            GameObject go_CheckPoint = GameObject.Find(curCheckpointName);
-            curCheckPointGO = go_CheckPoint;
+            if (scene.name != "hub_level")
+            {
+                curCheckpointName = other.gameObject.name;
+                PlayerPrefs.SetString("curCheckpointName", curCheckpointName);
+                GameObject go_CheckPoint = GameObject.Find(curCheckpointName);
+                curCheckPointGO = go_CheckPoint;
 
-            SaveCheckPoint();
+                SaveCheckPoint();
+            }
+            else
+                SaveHubLocation();
         }
 
         if (other.gameObject.tag == "Water")
