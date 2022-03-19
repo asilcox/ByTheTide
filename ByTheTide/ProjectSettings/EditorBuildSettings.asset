@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TimeAttack/T_A_Test.unity
     guid: c9de09e18b8eb634cb7c3749f2e918c7
   - enabled: 1
+    path: Assets/Scenes/TimeAttack/Level1_TA.unity
+    guid: f6f1152edf71ece47900393dedc6fbd9
+  - enabled: 1
     path: Assets/Scenes/TimeAttack/Level3_TA.unity
     guid: c4b04e1ea9ff9b54b940992fb6f40450
   - enabled: 1
