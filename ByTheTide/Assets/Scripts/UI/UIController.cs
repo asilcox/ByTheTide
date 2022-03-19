@@ -73,7 +73,6 @@ public class UIController : MonoBehaviour
     public void SettingsButton()
     {
         settingsMenu.SetActive(true);
-        pauseMenu.SetActive(false);
     }
 
     public void ReturnButton()
@@ -121,7 +120,7 @@ public class UIController : MonoBehaviour
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
         }
-        else
+        if(paused != true)
         {
             PanelReset();
             Time.timeScale = 1;
