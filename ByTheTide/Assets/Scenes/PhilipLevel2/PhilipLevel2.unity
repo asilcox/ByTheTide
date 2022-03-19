@@ -4742,11 +4742,10 @@ MonoBehaviour:
     is because the designers couldn\u2019t think of anything funnier to have as the
     tide control mechanic. I mean, it wouldn\u2019t be funny if it was a moon you
     could control "
-  - "That\u2019s right! Follow these back and you may find a way to control the tide.
-    You made it to this point, and you are just now asking about the toilet? I mean,
-    isn\u2019t it a bit late to be curious? Well, if I am being honest, it is because
-    the designers couldn\u2019t think of anything funnier to have as the tide control
-    mechanic. I mean, it wouldn\u2019t be funny if it was a moon you could control "
+  - "Do you see that yellow plane? Yep. That is the end. Once again, you\u2019ve
+    made your journey.  I\u2019m so proud of all of the respect and knowledge you\u2019ve
+    gained. Will you stop questioning the fire hydrant? You didn\u2019t care about
+    it in the tutorial or the first level. sigh- Just jump on the boat. "
   dialogueIndex: 0
   dialogueTextObj: {fileID: 1304595999}
 --- !u!4 &1027642023
