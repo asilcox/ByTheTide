@@ -76,5 +76,10 @@ public class audioManager : MonoBehaviour
         audSource.PlayOneShot(clips[6]);
     }
 
+    public void BoatSound()
+    {
+        audSource.PlayOneShot(clips[7]);
+    }
+
 }
 
