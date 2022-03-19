@@ -35,8 +35,6 @@ public class SaveSystemScript : MonoBehaviour
         if (scene.name == "Tutorial")
         {
             CurLevel = 0;
-            if (TutFirst == 0)
-                PlayerPrefs.SetInt("CurIndex", 0);
 
             PlayerPrefs.SetInt("TutFirst", 1);
         }
@@ -106,6 +104,8 @@ public class SaveSystemScript : MonoBehaviour
         }
         else
         {
+            PlayerPrefs.DeleteKey("CurIndex");
+
             PlayerPrefs.SetInt("TutFirst", 0);
 
             HubIslandPos.x = PlayerPrefs.GetFloat("HubIslandPosX", HubIslandPos.x);
