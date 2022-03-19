@@ -11,17 +11,15 @@ public class endLevelManager : MonoBehaviour
         SceneManager.LoadScene(nextLevelName);
     }
 
-    private void Start()
-    {
-        Scene scene = SceneManager.GetActiveScene();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
+        Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "churchysTestLevel")
         {
+            Debug.Log("In this scene");
             if (GameManager.instance.builtKey == true)
             {
+                Debug.Log("Key?");
                 if (other.gameObject.tag == "Player")
                 {
                     Invoke("LoadLevelWait", .05f);

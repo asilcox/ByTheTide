@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class SceneTransitionScript : MonoBehaviour
 {
     public string LevelToLoad;
     [SerializeField] SaveSystemScript SSS;
 
-    [SerializeField] Text text;
+    [SerializeField] TextMeshProUGUI text;
     private bool inRange;
 
     private void Start()
     {
         SSS = SSS.GetComponent<SaveSystemScript>();
-        text = text.GetComponent<Text>();
         text.text = string.Empty;
     }
 
