@@ -140,14 +140,21 @@ public class SaveSystemScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Scene scene = SceneManager.GetActiveScene();
+
         if (other.gameObject.tag == "CheckPoint")
         {
-            curCheckpointName = other.gameObject.name;
-            PlayerPrefs.SetString("curCheckpointName", curCheckpointName);
-            GameObject go_CheckPoint = GameObject.Find(curCheckpointName);
-            curCheckPointGO = go_CheckPoint;
+            if (scene.name != "hub_level")
+            {
+                curCheckpointName = other.gameObject.name;
+                PlayerPrefs.SetString("curCheckpointName", curCheckpointName);
+                GameObject go_CheckPoint = GameObject.Find(curCheckpointName);
+                curCheckPointGO = go_CheckPoint;
 
-            SaveCheckPoint();
+                SaveCheckPoint();
+            }
+            else
+                SaveHubLocation();
         }
 
         if (other.gameObject.tag == "Water")
