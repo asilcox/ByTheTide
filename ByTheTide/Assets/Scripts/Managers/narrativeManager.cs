@@ -33,6 +33,7 @@ public class narrativeManager : MonoBehaviour
                     dialogueTextObj.gameObject.SetActive(true);
                     dialogueTextObj.text = dialogues[dialogueIndex];
                     break;
+                    //With Churchy's help Janel did coding!
                 }
         }
     }
