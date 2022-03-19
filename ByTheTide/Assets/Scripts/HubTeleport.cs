@@ -19,7 +19,7 @@ public class HubTeleport : MonoBehaviour
         //nextBoat.SetActive(true);
         //player.transform.position = nextBoat.transform.position;
         //gameObject.SetActive(false);
-
+        audioManager.instance.BoatSound();
         //Turns off character controller
         player.GetComponent<CharacterController>().enabled = false;
         //Moves character position to previosly interacted with position
