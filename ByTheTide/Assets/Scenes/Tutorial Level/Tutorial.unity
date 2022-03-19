@@ -3397,6 +3397,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 440928, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.539838
+      objectReference: {fileID: 0}
+    - target: {fileID: 440928, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.539838
+      objectReference: {fileID: 0}
+    - target: {fileID: 440928, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.539838
+      objectReference: {fileID: 0}
     - target: {fileID: 477788, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
       propertyPath: m_RootOrder
       value: 45
@@ -14262,7 +14274,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6e3ac6e47b4d7a44685dfef9bf209413, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

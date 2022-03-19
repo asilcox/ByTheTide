@@ -112,17 +112,13 @@ public class SaveSystemScript : MonoBehaviour
             HubIslandPos.y = PlayerPrefs.GetFloat("HubIslandPosY", HubIslandPos.y);
             HubIslandPos.z = PlayerPrefs.GetFloat("HubIslandPosZ", HubIslandPos.z);
 
-            HubIslandRot.x = PlayerPrefs.GetFloat("HubIslandRotX", HubIslandRot.x);
             HubIslandRot.y = PlayerPrefs.GetFloat("HubIslandRotY", HubIslandRot.y);
-            HubIslandRot.z = PlayerPrefs.GetFloat("HubIslandRotZ", HubIslandRot.z);
 
             PlayerPrefs.SetFloat("CurPosX", 0);
             PlayerPrefs.SetFloat("CurPosY", 0);
             PlayerPrefs.SetFloat("CurPosZ", 0);
 
-            PlayerPrefs.SetFloat("CurRotX", 0);
             PlayerPrefs.SetFloat("CurRotY", 0);
-            PlayerPrefs.SetFloat("CurRotZ", 0);
 
             Lives = 3;
             PlayerPrefs.SetInt("Lives", 3);
@@ -164,9 +160,7 @@ public class SaveSystemScript : MonoBehaviour
     private void SaveCheckPoint()
     {
         SaveCurPos = transform.position;
-        SaveCurRot.x = transform.eulerAngles.x;
         SaveCurRot.y = transform.eulerAngles.y;
-        SaveCurRot.z = transform.eulerAngles.z;
 
         Debug.Log(SaveCurRot);
 
@@ -174,9 +168,7 @@ public class SaveSystemScript : MonoBehaviour
         PlayerPrefs.SetFloat("CurPosY", SaveCurPos.y);
         PlayerPrefs.SetFloat("CurPosZ", SaveCurPos.z);
 
-        PlayerPrefs.SetFloat("CurRotX", SaveCurRot.x);
         PlayerPrefs.SetFloat("CurRotY", SaveCurRot.y);
-        PlayerPrefs.SetFloat("CurRotZ", SaveCurRot.z);
 
         if (curCheckPointGO != null)
             curCheckPointGO.SetActive(false);
@@ -195,17 +187,13 @@ public class SaveSystemScript : MonoBehaviour
     public void SaveHubLocation()
     {
         HubIslandPos = transform.position;
-        HubIslandRot.x = transform.eulerAngles.x;
         HubIslandRot.y = transform.eulerAngles.y;
-        HubIslandRot.z = transform.eulerAngles.z;
 
         PlayerPrefs.SetFloat("HubIslandPosX", HubIslandPos.x);
         PlayerPrefs.SetFloat("HubIslandPosY", HubIslandPos.y);
         PlayerPrefs.SetFloat("HubIslandPosZ", HubIslandPos.z);
 
-        PlayerPrefs.SetFloat("HubIslandRotX", HubIslandRot.x);
         PlayerPrefs.SetFloat("HubIslandRotY", HubIslandRot.y);
-        PlayerPrefs.SetFloat("HubIslandRotZ", HubIslandRot.z);
     }
 
     private void CheckLives()
@@ -225,9 +213,9 @@ public class SaveSystemScript : MonoBehaviour
             PlayerPrefs.SetFloat("CurPosY", 0);
             PlayerPrefs.SetFloat("CurPosZ", 0);
 
-            PlayerPrefs.SetFloat("CurRotX", 0);
+            //PlayerPrefs.SetFloat("CurRotX", 0);
             PlayerPrefs.SetFloat("CurRotY", 0);
-            PlayerPrefs.SetFloat("CurRotZ", 0);
+            //PlayerPrefs.SetFloat("CurRotZ", 0);
             SceneManager.LoadScene("hub_level");
             PlayerPrefs.SetInt("Lives", 3);
             return;
