@@ -27,6 +27,7 @@ public class caveGate : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             gateUnlocked = true;
+            audioManager.instance.PressureplateSound();
         }
     }
 
