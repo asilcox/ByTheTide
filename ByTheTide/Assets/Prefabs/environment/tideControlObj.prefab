@@ -4873,6 +4873,7 @@ MonoBehaviour:
   minRaise: {x: 0, y: -0.5, z: 0}
   tStates: 0
   dnController: {fileID: 0}
+  partiSys: {fileID: 3476357146422987673}
 --- !u!1001 &1230779619838241394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4945,6 +4946,11 @@ PrefabInstance:
 --- !u!4 &1232319074361894130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4090322044374656, guid: 1c5f3552e1c67466e8d17d6b314b605e, type: 3}
+  m_PrefabInstance: {fileID: 1230779619838241394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3476357146422987673 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2389753256689623531, guid: 1c5f3552e1c67466e8d17d6b314b605e, type: 3}
   m_PrefabInstance: {fileID: 1230779619838241394}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7885527790058546390
