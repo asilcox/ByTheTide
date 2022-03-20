@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 2497348904165297680}
   - component: {fileID: 4672418975496441434}
   - component: {fileID: 2978482372293115769}
+  - component: {fileID: 804913685080764596}
   m_Layer: 3
   m_Name: SM_Platform
   m_TagString: Ground
@@ -158,3 +159,22 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!95 &804913685080764596
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3412629861347242273}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a41c0c2de288a34e98c991692e101a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
