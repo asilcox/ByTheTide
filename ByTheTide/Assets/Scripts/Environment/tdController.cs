@@ -17,6 +17,9 @@ public class tdController : MonoBehaviour
     [SerializeField] tideStates tStates;
     [Header("Get day night sys")]
     [SerializeField] DayNightController dnController;
+
+    [SerializeField] ParticleSystem partiSys;
+
     private void Start()
     {
         uManager = GameObject.FindObjectOfType<UIManager>();
@@ -30,7 +33,7 @@ public class tdController : MonoBehaviour
             //Tide is awaiting interaction
             case tideStates.idle:
                 {
-
+                    partiSys.enableEmission = false;
                     if (canInteract == true)
                     {
                         tStates = tideStates.interact;
@@ -42,11 +45,10 @@ public class tdController : MonoBehaviour
             case tideStates.interact:
                 {
                     dnController.daySpeedMultiplier = 0;
-
                     if (Input.GetKey(KeyCode.T))
                     {
                         //Call raise tide function
-                        if(audioManager.instance.audSource.isPlaying == false)
+                        if (audioManager.instance.audSource.isPlaying == false)
                         {
                             audioManager.instance.tideSound();
                         }
@@ -83,6 +85,7 @@ public class tdController : MonoBehaviour
 
     public void raiseTide()
     {
+        partiSys.enableEmission = true;
         if (tideObject.transform.position.y >= maxRaise.y)
         {
             Debug.Log("Max height reached");
@@ -98,6 +101,7 @@ public class tdController : MonoBehaviour
 
     public void lowerTide()
     {
+        partiSys.enableEmission = true;
         if (tideObject.transform.position.y <= minRaise.y)
         {
             Debug.Log("Min height reached");
