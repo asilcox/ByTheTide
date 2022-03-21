@@ -54,7 +54,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9c42f9d433f96d843a25f4997472e802, type: 3}
   - {fileID: 8300000, guid: 33f150a8ddf99054ba939ed77a97e1a5, type: 3}
   _MasterMixer: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
-  audSource: {fileID: 5357684318317003112}
+  audSource: {fileID: 388566489}
 --- !u!82 &5357684318317003112
 AudioSource:
   m_ObjectHideFlags: 0

@@ -158,7 +158,10 @@ public class SaveSystemScript : MonoBehaviour
         }
 
         if (other.gameObject.tag == "Water")
+        {
+            audioManager.instance.DeathSound();
             Invoke("CheckLives", .75f);
+        }
 
         if (other.gameObject.name == "endTrigger")
             CompletedLevel();
