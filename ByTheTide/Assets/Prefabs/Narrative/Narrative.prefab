@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8959279824675837950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8959279824675837944}
+  - component: {fileID: 8959279824675837945}
+  m_Layer: 0
+  m_Name: Narrative
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8959279824675837944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959279824675837950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8959279824675837945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959279824675837950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720d36324e7558e41a9988c0a8cd502d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrativePannel: {fileID: 0}
+  currentState: 0
+  dialogues:
+  - "I hope you aren\u2019t expecting this to be easy. You\u2019ve made it past so
+    much. We have to up the stakes. Things will move, and the rain will be persistent.
+    But I know if you\u2019ve made it here, you can make it through this level. "
+  - "See, I told you that you would be just fine. And I told you that you didn\u2019t
+    need to worry about the fire hydrant last level. If you make it to the end, I
+    may give you a better explanation. "
+  - "Well I guess I did promise. The fire hydrant is because we couldn\u2019t think
+    of anything cooler. It was going to be a toilet. And then we felt that was ridiculous.
+    So it became a fire hydrant.  Who knows, it may be magical fish soon. "
+  dialogueIndex: 0
+  dialogueTextObj: {fileID: 0}
