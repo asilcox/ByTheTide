@@ -170,6 +170,7 @@ public class SaveSystemScript : MonoBehaviour
 
         if (other.gameObject.tag == "Water")
         {
+            if (audioManager.instance !=null)
             audioManager.instance.DeathSound();
             Invoke("CheckLives", .75f);
         }
