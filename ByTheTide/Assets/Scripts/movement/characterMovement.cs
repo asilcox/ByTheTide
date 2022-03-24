@@ -20,6 +20,12 @@ public class characterMovement : MonoBehaviour
     [SerializeField] Transform lastPos;
     [SerializeField] bool isGrounded;
 
+    public float GetMovementSpeed() { return movementSpeed; }
+    public void SetMovementSpeed(float speed) { movementSpeed = speed; }
+
+    public float GetJumpHeight() { return jumpHeight; }
+    public void SetJumpHeight(float height) { jumpHeight = height; }
+
     // Start is called before the first frame update
     void Start()
     {
