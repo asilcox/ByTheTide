@@ -19683,7 +19683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535586970031824, guid: 9dddd7d49539f4dda8c0e9c965a30f70, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20.24
+      value: -20.365
       objectReference: {fileID: 0}
     - target: {fileID: 4535586970031824, guid: 9dddd7d49539f4dda8c0e9c965a30f70, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19695,15 +19695,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535586970031824, guid: 9dddd7d49539f4dda8c0e9c965a30f70, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4535586970031824, guid: 9dddd7d49539f4dda8c0e9c965a30f70, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4535586970031824, guid: 9dddd7d49539f4dda8c0e9c965a30f70, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4535586970031824, guid: 9dddd7d49539f4dda8c0e9c965a30f70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19717,6 +19717,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33067981302888830, guid: 9dddd7d49539f4dda8c0e9c965a30f70, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 4c233fce9660245bd81d004b836e6057, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dddd7d49539f4dda8c0e9c965a30f70, type: 3}
 --- !u!4 &886632917 stripped
@@ -34888,6 +34892,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 608563994}
     m_Modifications:
+    - target: {fileID: 6809837361125193621, guid: 3948cd7b380e69d4d814d86c11644099, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2199943756332739060, guid: 5dafb57a5e821435e8cddfe1635460ce, type: 3}
     - target: {fileID: 6837675535195868579, guid: 3948cd7b380e69d4d814d86c11644099, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
