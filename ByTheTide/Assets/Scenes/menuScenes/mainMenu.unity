@@ -10997,6 +10997,14 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: de7b046f8dcb3ec44bc1597cd7dcf663, type: 3}
+    - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+      propertyPath: clips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 943329a9e7c39b54cb946fdf9631d710, type: 3}
+    - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: clips.Array.data[7]
       value: 
       objectReference: {fileID: 8300000, guid: 3f4d4e7b8b7eb314aa6ff6a98e6aacad, type: 3}
@@ -14147,7 +14155,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6819690638030010617, guid: 0576719b349f9314da096d270046601c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 79065d3e88ca6ff429acb46613c674a3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 87f99f44bf1a4c74f9742f17b51d429c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
