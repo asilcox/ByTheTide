@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     string sceneName;
     bool bPlaying;
     public bool builtKey = false;
+    public int keyPieces = 0;
 
     //Grabs current scene for reference
     private void Start()
