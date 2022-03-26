@@ -4582,6 +4582,14 @@ PrefabInstance:
       propertyPath: playerPrefab
       value: 
       objectReference: {fileID: 2618161745350514154, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
+    - target: {fileID: 94735737892118338, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
+      propertyPath: far clip plane
+      value: 15000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282713372112364138, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1306416373317131518, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
       propertyPath: m_Enabled
       value: 1
