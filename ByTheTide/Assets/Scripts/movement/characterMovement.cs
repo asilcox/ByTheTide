@@ -19,6 +19,13 @@ public class characterMovement : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     [SerializeField] Transform lastPos;
     [SerializeField] bool isGrounded;
+    [SerializeField] Animator anim;
+
+    public float GetMovementSpeed() { return movementSpeed; }
+    public void SetMovementSpeed(float speed) { movementSpeed = speed; }
+
+    public float GetJumpHeight() { return jumpHeight; }
+    public void SetJumpHeight(float height) { jumpHeight = height; }
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +45,7 @@ public class characterMovement : MonoBehaviour
         //Jump input
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            anim.SetTrigger("Jump");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             audioManager.instance.JumpSound();
         }
@@ -55,12 +63,17 @@ public class characterMovement : MonoBehaviour
         {
             if (!audioManager.instance.audSource.isPlaying)
             {
+                anim.SetBool("Running", true);
                 audioManager.instance.RunSound();
             }
             else
             {
 
             }
+        }
+        if(myController.velocity.magnitude == 0)
+        {
+            anim.SetBool("Running", false);
         }
 
     }

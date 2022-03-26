@@ -146,19 +146,33 @@ public class SaveSystemScript : MonoBehaviour
         {
             if (scene.name != "hub_level")
             {
-                curCheckpointName = other.gameObject.name;
-                PlayerPrefs.SetString("curCheckpointName", curCheckpointName);
-                GameObject go_CheckPoint = GameObject.Find(curCheckpointName);
-                curCheckPointGO = go_CheckPoint;
-
-                SaveCheckPoint();
+                if (scene.name == "Tutorial")
+                {
+                    curCheckpointName = other.gameObject.name;
+                    PlayerPrefs.SetString("curCheckpointName", curCheckpointName);
+                    GameObject go_CheckPoint = GameObject.Find(curCheckpointName);
+                    curCheckPointGO = go_CheckPoint;
+                    SaveCheckPoint();
+                }
+                else
+                {
+                    Instantiate(Resources.Load("PuzzleEffect"), transform.position, transform.rotation);
+                    curCheckpointName = other.gameObject.name;
+                    PlayerPrefs.SetString("curCheckpointName", curCheckpointName);
+                    GameObject go_CheckPoint = GameObject.Find(curCheckpointName);
+                    curCheckPointGO = go_CheckPoint;
+                    SaveCheckPoint();
+                }
             }
             else
                 SaveHubLocation();
         }
 
         if (other.gameObject.tag == "Water")
+        {
+            audioManager.instance.DeathSound();
             Invoke("CheckLives", .75f);
+        }
 
         if (other.gameObject.name == "endTrigger")
             CompletedLevel();

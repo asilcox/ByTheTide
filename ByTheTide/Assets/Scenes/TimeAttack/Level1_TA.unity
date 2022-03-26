@@ -7848,6 +7848,7 @@ MonoBehaviour:
   minRaise: {x: 0, y: -0.5, z: 0}
   tStates: 0
   dnController: {fileID: 1629166962}
+  partiSys: {fileID: 0}
 --- !u!65 &756614542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9827,11 +9828,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18f35b3597c644928bc6e3f3d9458d86, type: 3}
---- !u!20 &1333495203 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2618161744813633194, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
-  m_PrefabInstance: {fileID: 2618161744738420848}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1364927590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4527797358460674, guid: b52e6fdb9179d4ef19097ea8727a4496, type: 3}
@@ -10081,6 +10077,7 @@ MonoBehaviour:
   minRaise: {x: 0, y: -0.5, z: 0}
   tStates: 0
   dnController: {fileID: 1629166962}
+  partiSys: {fileID: 0}
 --- !u!65 &1426937603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16812,7 +16809,7 @@ PrefabInstance:
     - target: {fileID: 11442714, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
       propertyPath: cameraToFollow
       value: 
-      objectReference: {fileID: 1333495203}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c4dc591640dea4691b79d07c77188e, type: 3}
 --- !u!1001 &1836196605
@@ -18433,7 +18430,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6819690638030010617, guid: 0576719b349f9314da096d270046601c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 6ff2a797ce9caf248813857226aad795, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 833a207075504f1478a4ff740e27b0fe, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

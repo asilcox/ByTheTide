@@ -6,16 +6,24 @@ public class rotationEffects : MonoBehaviour
 {
     [SerializeField] Vector3 rotationDir;
     [SerializeField] float rotationSpeed;
-    // Start is called before the first frame update
-    void Start()
+
+    private void OnTriggerStay(Collider other)
     {
-        
+        if(other.gameObject.tag == "Player")
+        {
+            other.gameObject.transform.SetParent(this.gameObject.transform);
+            other.gameObject.transform.localScale.Set(1,1,1);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.transform.localScale.Set(1, 1, 1);
+            other.gameObject.transform.SetParent(null);
+        }
+
     }
 
     private void FixedUpdate()
