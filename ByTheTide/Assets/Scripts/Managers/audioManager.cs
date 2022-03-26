@@ -81,5 +81,68 @@ public class audioManager : MonoBehaviour
         audSource.PlayOneShot(clips[7]);
     }
 
+    //Everything below this line is Janel's attempt at coding. I mimicked what I saw above, and I did the same thing in engine. If it doesn't work, delete everything below this line. JG
+    //I am pretty sure I am doing something wrong somewhere, because it doesn't reference anything. JG
+    //I am still pushing it to Main and hoping for the best. JG
+
+    public void TutorialIntro()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void TutorialMoon()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void Level1Intro()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void Level1Midway()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void Level1End()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void Hub()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void Level2Intro()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void Level2Midway()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void Level2End()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void Level3Intro()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void Level3Midway()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
+
+    public void Level3End()
+    {
+        audSource.PlayOneShot(clips[1]);
+    }
 }
 

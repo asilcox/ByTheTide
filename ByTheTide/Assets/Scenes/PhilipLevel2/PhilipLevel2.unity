@@ -4739,8 +4739,9 @@ GameObject:
   - component: {fileID: 1014213956}
   - component: {fileID: 1014213955}
   - component: {fileID: 1014213954}
+  - component: {fileID: 1014213959}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Level2Intro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4834,6 +4835,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1014213959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014213953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cf783434d1f2245ababbfb0fb88e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: ea96bade5720dff429baec4611065153, type: 3}
+  _MasterMixer: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
+  audSource: {fileID: 534823367}
 --- !u!1001 &1017828669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7563,8 +7580,9 @@ GameObject:
   - component: {fileID: 1681992157}
   - component: {fileID: 1681992156}
   - component: {fileID: 1681992155}
+  - component: {fileID: 1681992160}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Level2Midway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7658,6 +7676,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1681992160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681992154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cf783434d1f2245ababbfb0fb88e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 5ecc83ab216e1364aa0312e154573cff, type: 3}
+  _MasterMixer: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
+  audSource: {fileID: 534823367}
 --- !u!1001 &1705702434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8954,8 +8988,9 @@ GameObject:
   - component: {fileID: 2119640517}
   - component: {fileID: 2119640516}
   - component: {fileID: 2119640515}
+  - component: {fileID: 2119640520}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Level2End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9049,3 +9084,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2119640520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119640514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cf783434d1f2245ababbfb0fb88e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 5517e3b65ee2fb14c9597472bb9bed5f, type: 3}
+  _MasterMixer: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
+  audSource: {fileID: 534823367}

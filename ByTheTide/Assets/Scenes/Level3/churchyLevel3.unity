@@ -13145,6 +13145,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+--- !u!82 &667413292 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5357684318317003112, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+  m_PrefabInstance: {fileID: 667413291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &668867176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15068,8 +15073,9 @@ GameObject:
   - component: {fileID: 805796831}
   - component: {fileID: 805796830}
   - component: {fileID: 805796829}
+  - component: {fileID: 805796834}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Level3Midway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15163,6 +15169,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &805796834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805796828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cf783434d1f2245ababbfb0fb88e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: e30e4206550842c4fa8e9f1d513c29c2, type: 3}
+  _MasterMixer: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
+  audSource: {fileID: 667413292}
 --- !u!1001 &808648558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17611,8 +17633,9 @@ GameObject:
   - component: {fileID: 921390735}
   - component: {fileID: 921390734}
   - component: {fileID: 921390733}
+  - component: {fileID: 921390738}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Level3End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17706,6 +17729,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &921390738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921390732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cf783434d1f2245ababbfb0fb88e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 6cd5f6552621c174b80263a9de7e3305, type: 3}
+  _MasterMixer: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
+  audSource: {fileID: 667413292}
 --- !u!1 &923084486
 GameObject:
   m_ObjectHideFlags: 0
@@ -22772,8 +22811,9 @@ GameObject:
   - component: {fileID: 1234678599}
   - component: {fileID: 1234678598}
   - component: {fileID: 1234678602}
+  - component: {fileID: 1234678603}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Level3Intro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22867,6 +22907,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa95d5ba81cfa6439949b62625490ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1234678603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234678597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cf783434d1f2245ababbfb0fb88e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: ff0ba9cbb94057d4b9e02cae2a318d18, type: 3}
+  _MasterMixer: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
+  audSource: {fileID: 667413292}
 --- !u!1001 &1236915435
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -797,6 +797,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300008, guid: 6c396bc999804cd4a95900d384dd9caa, type: 3}
+--- !u!82 &53444898 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5357684318317003112, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
+  m_PrefabInstance: {fileID: 1948668740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &54657909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3246,8 +3251,9 @@ GameObject:
   - component: {fileID: 706137098}
   - component: {fileID: 706137097}
   - component: {fileID: 706137096}
+  - component: {fileID: 706137101}
   m_Layer: 6
-  m_Name: Cube
+  m_Name: TutorialIntro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3341,6 +3347,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &706137101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706137095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cf783434d1f2245ababbfb0fb88e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: d79451255b9a8974a8a49a126458cdc8, type: 3}
+  _MasterMixer: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
+  audSource: {fileID: 53444898}
 --- !u!4 &707166317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013314642978, guid: 9427ec3486e894940ae4503059700080, type: 3}
@@ -11558,7 +11580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1306416373317131518, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2618161744813633194, guid: 1d2e5150cc937114bab40c06005090f8, type: 3}
       propertyPath: m_ClearFlags
@@ -14437,8 +14459,9 @@ GameObject:
   - component: {fileID: 1969202792}
   - component: {fileID: 1969202791}
   - component: {fileID: 1969202790}
+  - component: {fileID: 1969202795}
   m_Layer: 6
-  m_Name: ww
+  m_Name: TutorialMoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14532,6 +14555,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1969202795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969202789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cf783434d1f2245ababbfb0fb88e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: df4dcaa7c3670934fbcea89918b0b6ea, type: 3}
+  _MasterMixer: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
+  audSource: {fileID: 53444898}
 --- !u!1001 &1971255616
 PrefabInstance:
   m_ObjectHideFlags: 0

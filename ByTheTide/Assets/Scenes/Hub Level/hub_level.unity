@@ -6481,8 +6481,9 @@ GameObject:
   - component: {fileID: 1425493518}
   - component: {fileID: 1425493517}
   - component: {fileID: 1425493521}
+  - component: {fileID: 1425493522}
   m_Layer: 6
-  m_Name: Cube
+  m_Name: Hub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6576,6 +6577,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa95d5ba81cfa6439949b62625490ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1425493522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425493516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cf783434d1f2245ababbfb0fb88e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: c03b874c073816e459d7d9b5d9ad3213, type: 3}
+  _MasterMixer: {fileID: 24100000, guid: 0576719b349f9314da096d270046601c, type: 2}
+  audSource: {fileID: 484341550}
 --- !u!1001 &1435893360
 PrefabInstance:
   m_ObjectHideFlags: 0
