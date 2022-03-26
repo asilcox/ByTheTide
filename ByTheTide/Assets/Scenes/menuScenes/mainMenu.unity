@@ -11003,7 +11003,7 @@ PrefabInstance:
     - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: clips.Array.data[6]
       value: 
-      objectReference: {fileID: 8300000, guid: 943329a9e7c39b54cb946fdf9631d710, type: 3}
+      objectReference: {fileID: 8300000, guid: 48d40adc3a24a6d488ad451df0e5e06f, type: 3}
     - target: {fileID: 7294422601123137453, guid: b2bf56f72fe35744eb6ef50c9d97851c, type: 3}
       propertyPath: clips.Array.data[7]
       value: 
